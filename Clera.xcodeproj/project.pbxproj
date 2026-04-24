@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13F24BD435B3B70567E41764 /* OnboardingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829BFD96FE0B5BCFDD7C75F7 /* OnboardingFlowView.swift */; };
+		24B8121D7B0E2F4D577EF70B /* CleraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E7E449BBA7D7BEFFBB36EA /* CleraApp.swift */; };
+		2A80F41AEB3E8439EFFDD5A7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D356A5E65404E89138F146A /* RootView.swift */; };
+		30D1F820843E667AB9DD0C28 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A517663669DA454FCFB59 /* ProgressView.swift */; };
+		4C63697374B41B42C1DCFF38 /* CleraTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DDB96301DD344130D30DAE /* CleraTheme.swift */; };
+		5777228F9E7ECA0DEAAF8A9C /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907AB8980F26FB026C2D434 /* AppModel.swift */; };
+		5DDD62AC597A059A4BF2BFD1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544355D9C664410ADD52AD7A /* Models.swift */; };
+		6CC04BDF8A2BF75456C73F48 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C3AEE32682072B8E5B42C /* ProfileView.swift */; };
+		BAABC4981135F0E0120C2773 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B722BDE3B8E8FFD050A9E4 /* MainTabView.swift */; };
+		C95EAFFB5A27461F8546EAC8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CFB72ED8D79C82ECD14B1 /* HomeView.swift */; };
+		CB965B0E26020463FFB8FBC1 /* CleraComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692ACE0F3A51997E9833D6A2 /* CleraComponents.swift */; };
+		DC920BB4A9C61B68B404FCC4 /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082F495EA9FE9A51CB83BAA3 /* RoutineView.swift */; };
+		E5FF26F59E1EB362131E07C9 /* CleraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A48EBC688E3CAFD0E60116A /* CleraTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CEC994BFF0EFAFE85AD8222 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31619AB7C603EB3FD231D265 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ECA357A637DC5A3080518AA;
+			remoteInfo = Clera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		082F495EA9FE9A51CB83BAA3 /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
+		0907AB8980F26FB026C2D434 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		3D356A5E65404E89138F146A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		440A517663669DA454FCFB59 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		5032E329307911E122A97930 /* CleraTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CleraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		544355D9C664410ADD52AD7A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		61DDB96301DD344130D30DAE /* CleraTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleraTheme.swift; sourceTree = "<group>"; };
+		63B722BDE3B8E8FFD050A9E4 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		692ACE0F3A51997E9833D6A2 /* CleraComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleraComponents.swift; sourceTree = "<group>"; };
+		709D8C34EDBEC7A407F65E14 /* Clera.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Clera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A48EBC688E3CAFD0E60116A /* CleraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleraTests.swift; sourceTree = "<group>"; };
+		829BFD96FE0B5BCFDD7C75F7 /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
+		972CFB72ED8D79C82ECD14B1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A6E7E449BBA7D7BEFFBB36EA /* CleraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleraApp.swift; sourceTree = "<group>"; };
+		FA1C3AEE32682072B8E5B42C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2959979D5A9D5CFFAC7A8285 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7A48EBC688E3CAFD0E60116A /* CleraTests.swift */,
+			);
+			name = Tests;
+			path = App/Tests;
+			sourceTree = "<group>";
+		};
+		36AE23511A52B2647CCBC88B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				544355D9C664410ADD52AD7A /* Models.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3D2208468B01FF0D81FC6874 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				972CFB72ED8D79C82ECD14B1 /* HomeView.swift */,
+				63B722BDE3B8E8FFD050A9E4 /* MainTabView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		45830B42B5AE67E64399A7AF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F959E5D55CAA3797AAC23945 /* App */,
+				8CB0C18AA562A4F9D3260D29 /* DesignSystem */,
+				A02A652637D2B5084FBD9106 /* Features */,
+				36AE23511A52B2647CCBC88B /* Support */,
+			);
+			name = Sources;
+			path = App/Sources;
+			sourceTree = "<group>";
+		};
+		470612B3C72B256E496C6359 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				61DDB96301DD344130D30DAE /* CleraTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		56E91472F78C493AE528A0DA = {
+			isa = PBXGroup;
+			children = (
+				45830B42B5AE67E64399A7AF /* Sources */,
+				2959979D5A9D5CFFAC7A8285 /* Tests */,
+				DCEB24149A3ACDA5D6DC5D22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D5C29FB2EEF6EA00C7616E9 /* Routine */ = {
+			isa = PBXGroup;
+			children = (
+				082F495EA9FE9A51CB83BAA3 /* RoutineView.swift */,
+			);
+			path = Routine;
+			sourceTree = "<group>";
+		};
+		7707661823C8A6ABF0FCE09B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				692ACE0F3A51997E9833D6A2 /* CleraComponents.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8CB0C18AA562A4F9D3260D29 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				7707661823C8A6ABF0FCE09B /* Components */,
+				470612B3C72B256E496C6359 /* Theme */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		92120026C32A3E3264EDFC77 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FA1C3AEE32682072B8E5B42C /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		96F18B5281CE263BF5ADD244 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				440A517663669DA454FCFB59 /* ProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		A02A652637D2B5084FBD9106 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3D2208468B01FF0D81FC6874 /* Home */,
+				CDE4AE9F82583F6726BF47B7 /* Onboarding */,
+				92120026C32A3E3264EDFC77 /* Profile */,
+				96F18B5281CE263BF5ADD244 /* Progress */,
+				6D5C29FB2EEF6EA00C7616E9 /* Routine */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CDE4AE9F82583F6726BF47B7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				829BFD96FE0B5BCFDD7C75F7 /* OnboardingFlowView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DCEB24149A3ACDA5D6DC5D22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				709D8C34EDBEC7A407F65E14 /* Clera.app */,
+				5032E329307911E122A97930 /* CleraTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F959E5D55CAA3797AAC23945 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0907AB8980F26FB026C2D434 /* AppModel.swift */,
+				A6E7E449BBA7D7BEFFBB36EA /* CleraApp.swift */,
+				3D356A5E65404E89138F146A /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A5674017CAC769C1264569E /* CleraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362C30F8B72D9CDC7639F60C /* Build configuration list for PBXNativeTarget "CleraTests" */;
+			buildPhases = (
+				0C7855AFFE28A900605B0E4D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7016F88F07462874A1F567FA /* PBXTargetDependency */,
+			);
+			name = CleraTests;
+			packageProductDependencies = (
+			);
+			productName = CleraTests;
+			productReference = 5032E329307911E122A97930 /* CleraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9ECA357A637DC5A3080518AA /* Clera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A91F86E0F5903B1D20F1D00 /* Build configuration list for PBXNativeTarget "Clera" */;
+			buildPhases = (
+				0CCCF5F20DB91C0DF4620D67 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clera;
+			packageProductDependencies = (
+			);
+			productName = Clera;
+			productReference = 709D8C34EDBEC7A407F65E14 /* Clera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31619AB7C603EB3FD231D265 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7A5674017CAC769C1264569E = {
+						ProvisioningStyle = Automatic;
+					};
+					9ECA357A637DC5A3080518AA = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5B6EFD3C77D44BE4131BF73B /* Build configuration list for PBXProject "Clera" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 56E91472F78C493AE528A0DA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DCEB24149A3ACDA5D6DC5D22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9ECA357A637DC5A3080518AA /* Clera */,
+				7A5674017CAC769C1264569E /* CleraTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C7855AFFE28A900605B0E4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5FF26F59E1EB362131E07C9 /* CleraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CCCF5F20DB91C0DF4620D67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5777228F9E7ECA0DEAAF8A9C /* AppModel.swift in Sources */,
+				24B8121D7B0E2F4D577EF70B /* CleraApp.swift in Sources */,
+				CB965B0E26020463FFB8FBC1 /* CleraComponents.swift in Sources */,
+				4C63697374B41B42C1DCFF38 /* CleraTheme.swift in Sources */,
+				C95EAFFB5A27461F8546EAC8 /* HomeView.swift in Sources */,
+				BAABC4981135F0E0120C2773 /* MainTabView.swift in Sources */,
+				5DDD62AC597A059A4BF2BFD1 /* Models.swift in Sources */,
+				13F24BD435B3B70567E41764 /* OnboardingFlowView.swift in Sources */,
+				6CC04BDF8A2BF75456C73F48 /* ProfileView.swift in Sources */,
+				30D1F820843E667AB9DD0C28 /* ProgressView.swift in Sources */,
+				2A80F41AEB3E8439EFFDD5A7 /* RootView.swift in Sources */,
+				DC920BB4A9C61B68B404FCC4 /* RoutineView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7016F88F07462874A1F567FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9ECA357A637DC5A3080518AA /* Clera */;
+			targetProxy = 1CEC994BFF0EFAFE85AD8222 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0BF7C4C228BB115BE6FE94FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		0F88E2F198E60BD034A1D80D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.attm.clera;
+				PRODUCT_NAME = Clera;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		513949D757AC1B92F2A4451E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.attm.cleraTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clera.app/Clera";
+			};
+			name = Release;
+		};
+		74F85DC3070E816ED6004F50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		C53512F1114EA5590AD30151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = App/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.attm.clera;
+				PRODUCT_NAME = Clera;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E8CA2A0B1C8A71B2A1D99BD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.attm.cleraTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clera.app/Clera";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A91F86E0F5903B1D20F1D00 /* Build configuration list for PBXNativeTarget "Clera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C53512F1114EA5590AD30151 /* Debug */,
+				0F88E2F198E60BD034A1D80D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		362C30F8B72D9CDC7639F60C /* Build configuration list for PBXNativeTarget "CleraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8CA2A0B1C8A71B2A1D99BD3 /* Debug */,
+				513949D757AC1B92F2A4451E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5B6EFD3C77D44BE4131BF73B /* Build configuration list for PBXProject "Clera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74F85DC3070E816ED6004F50 /* Debug */,
+				0BF7C4C228BB115BE6FE94FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31619AB7C603EB3FD231D265 /* Project object */;
+}
