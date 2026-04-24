@@ -30,7 +30,7 @@ struct ProfileView: View {
                     }
 
                     Button("Restart onboarding") {
-                        appModel.hasCompletedOnboarding = false
+                        appModel.restartOnboarding()
                     }
                     .buttonStyle(CleraPrimaryButtonStyle())
                 }
@@ -53,4 +53,3 @@ struct ProfileView: View {
         }
     }
 }
-

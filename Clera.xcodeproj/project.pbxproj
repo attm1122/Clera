@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03591B05327690D397EC9498 /* AppPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168F2B928D9BF2BD2C3964B2 /* AppPersistence.swift */; };
 		13F24BD435B3B70567E41764 /* OnboardingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829BFD96FE0B5BCFDD7C75F7 /* OnboardingFlowView.swift */; };
 		24B8121D7B0E2F4D577EF70B /* CleraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E7E449BBA7D7BEFFBB36EA /* CleraApp.swift */; };
 		2A80F41AEB3E8439EFFDD5A7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D356A5E65404E89138F146A /* RootView.swift */; };
@@ -15,6 +16,7 @@
 		5777228F9E7ECA0DEAAF8A9C /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907AB8980F26FB026C2D434 /* AppModel.swift */; };
 		5DDD62AC597A059A4BF2BFD1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544355D9C664410ADD52AD7A /* Models.swift */; };
 		6CC04BDF8A2BF75456C73F48 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C3AEE32682072B8E5B42C /* ProfileView.swift */; };
+		A4EC3078EE31562A36357DAC /* CaptureFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B25DB74A344C95032E276 /* CaptureFlowView.swift */; };
 		BAABC4981135F0E0120C2773 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B722BDE3B8E8FFD050A9E4 /* MainTabView.swift */; };
 		C95EAFFB5A27461F8546EAC8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972CFB72ED8D79C82ECD14B1 /* HomeView.swift */; };
 		CB965B0E26020463FFB8FBC1 /* CleraComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692ACE0F3A51997E9833D6A2 /* CleraComponents.swift */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		082F495EA9FE9A51CB83BAA3 /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
 		0907AB8980F26FB026C2D434 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		168F2B928D9BF2BD2C3964B2 /* AppPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPersistence.swift; sourceTree = "<group>"; };
+		2A2B25DB74A344C95032E276 /* CaptureFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureFlowView.swift; sourceTree = "<group>"; };
 		3D356A5E65404E89138F146A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		440A517663669DA454FCFB59 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		5032E329307911E122A97930 /* CleraTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CleraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +55,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		020151E9EEC9E4BD85E8D575 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				2A2B25DB74A344C95032E276 /* CaptureFlowView.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
 		2959979D5A9D5CFFAC7A8285 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +75,7 @@
 		36AE23511A52B2647CCBC88B /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				168F2B928D9BF2BD2C3964B2 /* AppPersistence.swift */,
 				544355D9C664410ADD52AD7A /* Models.swift */,
 			);
 			path = Support;
@@ -150,6 +163,7 @@
 		A02A652637D2B5084FBD9106 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				020151E9EEC9E4BD85E8D575 /* Capture */,
 				3D2208468B01FF0D81FC6874 /* Home */,
 				CDE4AE9F82583F6726BF47B7 /* Onboarding */,
 				92120026C32A3E3264EDFC77 /* Profile */,
@@ -275,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5777228F9E7ECA0DEAAF8A9C /* AppModel.swift in Sources */,
+				03591B05327690D397EC9498 /* AppPersistence.swift in Sources */,
+				A4EC3078EE31562A36357DAC /* CaptureFlowView.swift in Sources */,
 				24B8121D7B0E2F4D577EF70B /* CleraApp.swift in Sources */,
 				CB965B0E26020463FFB8FBC1 /* CleraComponents.swift in Sources */,
 				4C63697374B41B42C1DCFF38 /* CleraTheme.swift in Sources */,
