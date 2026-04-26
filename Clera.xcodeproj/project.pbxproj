@@ -43,6 +43,7 @@
 		25C10D0EAA00950994175929 /* CloudSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E248276F1C64C171E326EE /* CloudSyncTests.swift */; };
 		26BC2E35F7E3536BE11B144B /* RoutineImpactAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38773F60DBB96EE9ACCE8E9 /* RoutineImpactAttribution.swift */; };
 		29D242C9044156FE44B1B5EA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03D0EA9F35890199B11862 /* SplashScreenView.swift */; };
+		2A74C1F72C24E1CA35758951 /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA37785C0F2A7ADBAF69E98 /* FirebaseVertexAI */; };
 		2A80F41AEB3E8439EFFDD5A7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D356A5E65404E89138F146A /* RootView.swift */; };
 		2D84D4696AB4FA6C2F1298A0 /* DailySkinAdviceEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCCB3E90D3B066B21DED55 /* DailySkinAdviceEngineTests.swift */; };
 		2E83BA5622CCBAC0356E1C12 /* DataDensityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517FA68C393CC89A90B164C /* DataDensityBadge.swift */; };
@@ -94,6 +95,7 @@
 		6792F8AB66124DE6DB8BCCE5 /* ScanProgressAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EDEFE0EBB262DCEE7D024C /* ScanProgressAnimation.swift */; };
 		67BCFEF71C4184F241848039 /* EnvironmentRuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6516C3F1C2CC200B4576DE34 /* EnvironmentRuleEngine.swift */; };
 		68572A8DC6DDD952BB1CCAAF /* FirestoreDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C44573446C6FA85929595 /* FirestoreDecodingError.swift */; };
+		686B0B7831035B6CB693A22E /* NoOpAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AE56794B1A42DD05F8D0BD /* NoOpAIService.swift */; };
 		6A8164B6C15F01B8B4B8B077 /* WeeklyInsightEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E7C8F6A7AFF7AE4F07FB7B /* WeeklyInsightEngine.swift */; };
 		6CC04BDF8A2BF75456C73F48 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C3AEE32682072B8E5B42C /* ProfileView.swift */; };
 		6E052E44556FCDB3FFD85899 /* EnvironmentalContextEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C3908F399EDDB6714AC4B /* EnvironmentalContextEngine.swift */; };
@@ -153,10 +155,12 @@
 		BEDA2EED20386C8FCDC33EEB /* InsightCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32EDF6D52E7CC19F5944D28 /* InsightCard.swift */; };
 		C1E72BC26AFC20C3065FA9C4 /* MockCrashReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E780FC441E6A3C6A8A0B6 /* MockCrashReporter.swift */; };
 		C4E496E895A1E1044C1124F2 /* DailyAdviceWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420607F48E5B1B96DB9A126 /* DailyAdviceWidgetView.swift */; };
+		C66BD37B190B5BBC534C93BA /* VertexAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B333B9313D18E8FA716B950E /* VertexAIService.swift */; };
 		C9B273D258D73B7C35CDB1FE /* AppStateManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684361DFF5C65BD34800E2DB /* AppStateManagers.swift */; };
 		CB965B0E26020463FFB8FBC1 /* CleraComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692ACE0F3A51997E9833D6A2 /* CleraComponents.swift */; };
 		CF3D9AC89B618E2FD30C49DB /* RecommendationRanker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B870F621A8B234A033360C91 /* RecommendationRanker.swift */; };
 		D004DA198ACE6FB0E559E29F /* FaceZoneMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F99F73D93A0DC8B29F129E /* FaceZoneMapper.swift */; };
+		D031303C7723A20AA9CF679E /* AIProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CF4A9ED82E51EF550CCA05 /* AIProviding.swift */; };
 		D2C24854878EA1BA95D40813 /* BaselineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA076ABB3E09EE96030798 /* BaselineManager.swift */; };
 		D5CD2C6FB09DA94F6C0045CD /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978DCBE739FACDDC65D729A /* ImageStore.swift */; };
 		D610C8128F2BC14F0C657AF3 /* SkinPatternRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B575EBF185CC5DE12386F427 /* SkinPatternRecognition.swift */; };
@@ -242,6 +246,7 @@
 		37CB86F3C79A9CE2F8622B64 /* DailyAdviceWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAdviceWidgetBundle.swift; sourceTree = "<group>"; };
 		37FAB9A3DEA44554CF029670 /* TimelineMarkerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineMarkerRow.swift; sourceTree = "<group>"; };
 		385D18F5337149F3729221B6 /* DailySkinAdviceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySkinAdviceEngine.swift; sourceTree = "<group>"; };
+		39CF4A9ED82E51EF550CCA05 /* AIProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProviding.swift; sourceTree = "<group>"; };
 		3A283976B3E63C102AF4F5E0 /* ProviderResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderResolver.swift; sourceTree = "<group>"; };
 		3BE12030957B405F9551020D /* RoutineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineRepository.swift; sourceTree = "<group>"; };
 		3D356A5E65404E89138F146A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -337,6 +342,7 @@
 		ABF396C36BC3728DB4154F0E /* ScanProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanProcessingView.swift; sourceTree = "<group>"; };
 		AE41DB590C900D8A8A468BFD /* DailyAdviceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAdviceWidget.swift; sourceTree = "<group>"; };
 		B16FB5A4AA8E935FE6B24FAF /* DailyAdviceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAdviceCard.swift; sourceTree = "<group>"; };
+		B333B9313D18E8FA716B950E /* VertexAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexAIService.swift; sourceTree = "<group>"; };
 		B3EAC081667D41BFCB57D1D0 /* SkinTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinTimelineView.swift; sourceTree = "<group>"; };
 		B4032E2AF38792F2DDDE4287 /* ProductRuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRuleEngine.swift; sourceTree = "<group>"; };
 		B4390E088456C41DF12C550C /* InitialSkinMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSkinMapView.swift; sourceTree = "<group>"; };
@@ -370,6 +376,7 @@
 		DAE35F69CE0607AFAC924C44 /* UserProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRepository.swift; sourceTree = "<group>"; };
 		DBB4A5116AF30879CA2D986F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DBF231B0BF1A78F3AD6C9045 /* AppleVisionLandmarkDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleVisionLandmarkDetector.swift; sourceTree = "<group>"; };
+		E4AE56794B1A42DD05F8D0BD /* NoOpAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoOpAIService.swift; sourceTree = "<group>"; };
 		E4B37EA32B2816F29C66B0A6 /* SkinContextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinContextBuilder.swift; sourceTree = "<group>"; };
 		E4F250CF2DF8749556A36DA4 /* DailyAdviceWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyAdviceWidget.entitlements; sourceTree = "<group>"; };
 		E5D478BA226D276ADCCC2886 /* RoutineRuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineRuleEngine.swift; sourceTree = "<group>"; };
@@ -401,6 +408,7 @@
 				418E3BDEFC26617D23421A55 /* FirebaseCrashlytics in Frameworks */,
 				1DF8C84539BC9A7EDF26CE57 /* FirebaseCore in Frameworks */,
 				F92A444DB89BED4344B12C1C /* FirebaseAnalytics in Frameworks */,
+				2A74C1F72C24E1CA35758951 /* FirebaseVertexAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +781,8 @@
 				A70BA697CDA0B2AE3158E0E7 /* FirestoreRoutineRepository.swift */,
 				5B2E1E0422D9CA9C2614E692 /* FirestoreSkinScanRepository.swift */,
 				67059190E870F1F202AF7D7E /* FirestoreUserProfileRepository.swift */,
+				E4AE56794B1A42DD05F8D0BD /* NoOpAIService.swift */,
+				B333B9313D18E8FA716B950E /* VertexAIService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -1055,6 +1065,7 @@
 		F823173C49911D6EB4761CD2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				39CF4A9ED82E51EF550CCA05 /* AIProviding.swift */,
 				F1907AE23CA358F18346D9DF /* AuthProviding.swift */,
 				A758E41FC4B59D8718B3ED7D /* CloudSyncing.swift */,
 				5BEA555B6467AFE5874CF63C /* CrashReporting.swift */,
@@ -1144,6 +1155,7 @@
 				E0E02B657617AE998A5218E5 /* FirebaseCrashlytics */,
 				EA85C830A5AD20BB242FBF5B /* FirebaseCore */,
 				CBA6618A0B5C853E10811DA9 /* FirebaseAnalytics */,
+				8BA37785C0F2A7ADBAF69E98 /* FirebaseVertexAI */,
 			);
 			productName = Clera;
 			productReference = 709D8C34EDBEC7A407F65E14 /* Clera.app */;
@@ -1233,6 +1245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D031303C7723A20AA9CF679E /* AIProviding.swift in Sources */,
 				13353345D91D4322130B8150 /* AdviceCopyEngine.swift in Sources */,
 				92C373461E01C21CC4EDAA41 /* AnalyticsLogger.swift in Sources */,
 				5777228F9E7ECA0DEAAF8A9C /* AppModel.swift in Sources */,
@@ -1304,6 +1317,7 @@
 				6784AF6D9F3A2BCD267265E3 /* MigrationError.swift in Sources */,
 				B338ADB88809EA83A64E419C /* Models.swift in Sources */,
 				51933560DE4B26E394A36A66 /* NativeQualityAnalyzer.swift in Sources */,
+				686B0B7831035B6CB693A22E /* NoOpAIService.swift in Sources */,
 				F1A1B28717E733DBD4698FFC /* NotificationManager.swift in Sources */,
 				13F24BD435B3B70567E41764 /* OnboardingFlowView.swift in Sources */,
 				6600FEE1DCC54719173CBD3F /* OpenWeatherAQProvider.swift in Sources */,
@@ -1373,6 +1387,7 @@
 				37BD014B4E8A4DC80533569E /* TodayView.swift in Sources */,
 				8D4710E4DEF0970BE16EDE8D /* TrendAnalyzer.swift in Sources */,
 				B97ABCA61FE97ACE268E8E75 /* UserProfileRepository.swift in Sources */,
+				C66BD37B190B5BBC534C93BA /* VertexAIService.swift in Sources */,
 				92075511A4CF8F60E8A53B5E /* VisionProvider.swift in Sources */,
 				E4C84BCB6A8C7ABC8D0AC6F7 /* VisualDifferenceOverlay.swift in Sources */,
 				17F4BF6D71BF0AF2C9927472 /* WeatherKitProviders.swift in Sources */,
@@ -1705,6 +1720,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A288293F55E2060BC700FE8D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		8BA37785C0F2A7ADBAF69E98 /* FirebaseVertexAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A288293F55E2060BC700FE8D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseVertexAI;
 		};
 		CBA6618A0B5C853E10811DA9 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

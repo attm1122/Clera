@@ -8,6 +8,7 @@ final class AppModel {
     let authProvider: AuthProviding
     let cloudSync: CloudSyncing?
     let crashReporter: CrashReporting
+    let aiService: AIProviding
     private let migration: LocalToCloudMigration?
     private var authStateTask: Task<Void, Never>?
 
@@ -53,12 +54,14 @@ final class AppModel {
         authProvider: AuthProviding = FirebaseAuthService(),
         cloudSync: CloudSyncing? = nil,
         crashReporter: CrashReporting = NoOpCrashReporter(),
+        aiService: AIProviding = NoOpAIService(),
         migration: LocalToCloudMigration? = nil
     ) {
         self.persistence = persistence
         self.authProvider = authProvider
         self.cloudSync = cloudSync
         self.crashReporter = crashReporter
+        self.aiService = aiService
         self.migration = migration
 
         if let state = persistence.load() {
@@ -132,6 +135,9 @@ final class AppModel {
         crashReporter.configure()
 
         let authProvider: AuthProviding = FirebaseAuthService()
+        let aiService: AIProviding = FirebaseConfiguration.isConfigured
+            ? VertexAIService(crashReporter: crashReporter)
+            : NoOpAIService()
         let profileRepo = FirestoreUserProfileRepository()
         let scanRepo = FirestoreSkinScanRepository()
         let routineRepo = FirestoreRoutineRepository()
@@ -153,6 +159,7 @@ final class AppModel {
             authProvider: authProvider,
             cloudSync: cloudSync,
             crashReporter: crashReporter,
+            aiService: aiService,
             migration: migration
         )
     }
