@@ -4,6 +4,19 @@ import Foundation
 
 enum EnvironmentRuleEngine {
 
+    enum Thresholds {
+        static let uvHigh = 8.0
+        static let uvModerate = 6.0
+        static let uvLow = 3.0
+        static let humidityVeryLow = 30.0
+        static let humidityLow = 40.0
+        static let aqiPoor = 100
+        static let aqiModerate = 75
+        static let tempHot = 28.0
+        static let tempCold = 5.0
+        static let windStrong = 25.0
+    }
+
     static func evaluate(context: SkinContext) -> [SkinRecommendation] {
         var recommendations: [SkinRecommendation] = []
 
@@ -17,7 +30,7 @@ enum EnvironmentRuleEngine {
         let aqi = context.airQualitySnapshot?.aqi ?? 0
 
         // UV rules
-        if uv >= 8 {
+        if uv >= Thresholds.uvHigh {
             recommendations.append(SkinRecommendation(
                 title: "Strong UV protection needed",
                 body: "UV index is very high today. Use broad-spectrum SPF 50+, reapply every 2 hours outdoors, and seek shade during peak hours.",
@@ -29,7 +42,7 @@ enum EnvironmentRuleEngine {
                 durationDays: 1,
                 createdAt: .now
             ))
-        } else if uv >= 6 {
+        } else if uv >= Thresholds.uvModerate {
             recommendations.append(SkinRecommendation(
                 title: "High UV — reapply sunscreen",
                 body: "UV is strong today. Apply SPF 30+ or higher this morning and reapply around midday if you are outside.",
@@ -41,7 +54,7 @@ enum EnvironmentRuleEngine {
                 durationDays: 1,
                 createdAt: .now
             ))
-        } else if uv >= 3 {
+        } else if uv >= Thresholds.uvLow {
             recommendations.append(SkinRecommendation(
                 title: "Moderate UV — use sunscreen",
                 body: "UV is moderate today. SPF is still your most important step this morning.",
@@ -56,7 +69,7 @@ enum EnvironmentRuleEngine {
         }
 
         // Humidity rules
-        if humidity < 30 {
+        if humidity < Thresholds.humidityVeryLow {
             recommendations.append(SkinRecommendation(
                 title: "Very dry air — protect your barrier",
                 body: "Humidity is very low. Add a barrier-supporting moisturiser and consider a humidifier indoors.",
@@ -68,7 +81,7 @@ enum EnvironmentRuleEngine {
                 durationDays: 1,
                 createdAt: .now
             ))
-        } else if humidity < 40 {
+        } else if humidity < Thresholds.humidityLow {
             recommendations.append(SkinRecommendation(
                 title: "Low humidity — add moisture",
                 body: "Air is dry today. A hydrating serum or thicker moisturiser may help your skin stay comfortable.",
@@ -83,7 +96,7 @@ enum EnvironmentRuleEngine {
         }
 
         // AQI rules
-        if aqi > 100 {
+        if aqi > Thresholds.aqiPoor {
             recommendations.append(SkinRecommendation(
                 title: "Poor air quality — cleanse thoroughly",
                 body: "Air quality is poor. Rinse your face after being outside and use your evening cleanse to remove particulates.",
@@ -95,7 +108,7 @@ enum EnvironmentRuleEngine {
                 durationDays: 1,
                 createdAt: .now
             ))
-        } else if aqi > 75 {
+        } else if aqi > Thresholds.aqiModerate {
             recommendations.append(SkinRecommendation(
                 title: "Moderate pollution — protect your barrier",
                 body: "Air quality is moderate. A good moisturiser helps form a protective layer against environmental particulates.",
@@ -110,7 +123,7 @@ enum EnvironmentRuleEngine {
         }
 
         // Temperature rules
-        if temp > 28 {
+        if temp > Thresholds.tempHot {
             recommendations.append(SkinRecommendation(
                 title: "Hot weather — manage sweat and oil",
                 body: "High temperatures can increase oil and sweat. Keep your routine light and avoid heavy occlusive products.",
@@ -122,7 +135,7 @@ enum EnvironmentRuleEngine {
                 durationDays: 1,
                 createdAt: .now
             ))
-        } else if temp < 5 {
+        } else if temp < Thresholds.tempCold {
             recommendations.append(SkinRecommendation(
                 title: "Cold weather — add protection",
                 body: "Cold air strips moisture. Add an extra layer of moisturiser and protect exposed skin when outside.",
@@ -137,7 +150,7 @@ enum EnvironmentRuleEngine {
         }
 
         // Wind rules
-        if weather.windSpeedKmh > 25 {
+        if weather.windSpeedKmh > Thresholds.windStrong {
             recommendations.append(SkinRecommendation(
                 title: "Windy conditions — protect exposed skin",
                 body: "Strong wind can strip moisture from your skin. A protective moisturiser or balm helps prevent dryness.",
