@@ -4,6 +4,26 @@ import Foundation
 
 enum SkinRiskScorer {
 
+    enum Constants {
+        static let maxTotalScore = 100
+        static let maxHumidityScore = 20
+        static let maxSkinProfileScore = 15
+        static let maxScanTrendScore = 8
+        static let maxRoutineScore = 5
+        static let humidityDrySkinThreshold = 40.0
+        static let humidityOilySkinThreshold = 70.0
+        static let temperatureComfortRange = 10.1...28.0
+        static let temperatureHotThreshold = 28.1...32.0
+        static let windCalmThreshold = 15.0
+        static let windModerateThreshold = 25.0
+        static let windStrongThreshold = 40.0
+        static let aqiGoodThreshold = 50
+        static let aqiModerateThreshold = 100
+        static let aqiUnhealthyThreshold = 150
+        static let routineAdherenceThreshold = 0.5
+        static let scanGapThresholdDays = 7
+    }
+
     struct RiskInputs {
         let weather: DailyWeatherSnapshot
         let airQuality: AirQualitySnapshot
@@ -37,7 +57,7 @@ enum SkinRiskScorer {
 
         let rawTotal = uvScore + humidityScore + temperatureScore + windScore +
                        airQualityScore + skinProfileScore + scanTrendScore + routineScore
-        let totalScore = min(rawTotal, 100)
+        let totalScore = min(rawTotal, Constants.maxTotalScore)
 
         return RiskBreakdown(
             uvScore: uvScore,
@@ -77,11 +97,11 @@ enum SkinRiskScorer {
         default: baseScore = 8
         }
 
-        if skinType == .dry && humidity < 40 {
-            return min(baseScore + 3, 20)
+        if skinType == .dry && humidity < Constants.humidityDrySkinThreshold {
+            return min(baseScore + 3, Constants.maxHumidityScore)
         }
-        if skinType == .oily && humidity > 70 {
-            return min(baseScore + 3, 20)
+        if skinType == .oily && humidity > Constants.humidityOilySkinThreshold {
+            return min(baseScore + 3, Constants.maxHumidityScore)
         }
         return baseScore
     }
@@ -90,26 +110,26 @@ enum SkinRiskScorer {
         switch temp {
         case ..<5: return 15
         case 5...10: return 10
-        case 10.1...28: return 0
-        case 28.1...32: return 10
+        case Constants.temperatureComfortRange: return 0
+        case Constants.temperatureHotThreshold: return 10
         default: return 15
         }
     }
 
     static func scoreWind(_ windKmh: Double) -> Int {
         switch windKmh {
-        case 0...15: return 0
-        case 15.1...25: return 3
-        case 25.1...40: return 5
+        case 0...Constants.windCalmThreshold: return 0
+        case Constants.windCalmThreshold...Constants.windModerateThreshold: return 3
+        case Constants.windModerateThreshold...Constants.windStrongThreshold: return 5
         default: return 10
         }
     }
 
     static func scoreAirQuality(_ aqi: Int) -> Int {
         switch aqi {
-        case 0...50: return 0
-        case 51...100: return 3
-        case 101...150: return 7
+        case 0...Constants.aqiGoodThreshold: return 0
+        case Constants.aqiGoodThreshold...Constants.aqiModerateThreshold: return 3
+        case Constants.aqiModerateThreshold...Constants.aqiUnhealthyThreshold: return 7
         default: return 10
         }
     }
@@ -123,7 +143,7 @@ enum SkinRiskScorer {
         case .reactive: score += 8
         }
 
-        if profile.skinType == .dry && weather.humidityPercent < 40 {
+        if profile.skinType == .dry && weather.humidityPercent < Constants.humidityDrySkinThreshold {
             score += 2
         }
         if profile.skinType == .oily && weather.temperatureCelsius > 28 {
@@ -133,7 +153,7 @@ enum SkinRiskScorer {
             score += 2
         }
 
-        return min(score, 15)
+        return min(score, Constants.maxSkinProfileScore)
     }
 
     static func scoreScanTrend(_ context: ScanContext) -> Int {
@@ -142,15 +162,15 @@ enum SkinRiskScorer {
         if context.hasRecentBreakouts { score += 2 }
         if context.hasRecentDryness { score += 2 }
         if !context.worseningZones.isEmpty { score += 1 }
-        if context.daysSinceLastScan > 7 { score += 1 }
-        return min(score, 8)
+        if context.daysSinceLastScan > Constants.scanGapThresholdDays { score += 1 }
+        return min(score, Constants.maxScanTrendScore)
     }
 
     static func scoreRoutine(_ context: RoutineContext) -> Int {
         var score = 0
-        if context.adherenceThisWeek < 0.5 { score += 2 }
+        if context.adherenceThisWeek < Constants.routineAdherenceThreshold { score += 2 }
         if context.recentlyUsedExfoliant && !context.spfPresentInRoutine { score += 3 }
         if context.recentlyUsedRetinol { score += 1 }
-        return min(score, 5)
+        return min(score, Constants.maxRoutineScore)
     }
 }

@@ -3,6 +3,14 @@ import Foundation
 // MARK: - Skin Score Calculator
 
 enum SkinScoreCalculator {
+    enum Thresholds {
+        static let highConfidence = 0.7
+        static let mediumConfidence = 0.4
+        static let severityNoneScore = 10
+        static let severityLowScore = 30
+        static let severityModerateScore = 55
+        static let severityHighScore = 80
+    }
 
     static func calculateZoneScores(from skinMap: SkinMap?) -> [ZoneSkinScore] {
         guard let skinMap = skinMap else {
@@ -37,8 +45,8 @@ enum SkinScoreCalculator {
                 congestion: severityToScore(status.congestion),
                 sensitivity: severityToScore(status.irritation),
                 confidence: EngineConfidence(
-                    level: confidence > 0.7 ? .high : confidence > 0.4 ? .medium : .low,
-                    reasons: confidence > 0.7 ? ["Good scan quality"] : ["Limited scan confidence"]
+                    level: confidence > Thresholds.highConfidence ? .high : confidence > Thresholds.mediumConfidence ? .medium : .low,
+                    reasons: confidence > Thresholds.highConfidence ? ["Good scan quality"] : ["Limited scan confidence"]
                 )
             )
         }
@@ -73,10 +81,10 @@ enum SkinScoreCalculator {
 
     private static func severityToScore(_ severity: ZoneSeverity) -> Int {
         switch severity {
-        case .none: return 10
-        case .low: return 30
-        case .moderate: return 55
-        case .high: return 80
+        case .none: return Thresholds.severityNoneScore
+        case .low: return Thresholds.severityLowScore
+        case .moderate: return Thresholds.severityModerateScore
+        case .high: return Thresholds.severityHighScore
         }
     }
 

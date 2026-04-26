@@ -268,10 +268,8 @@ enum DailyCopilotEngine {
             }
         }
         
-        // Step 1: Cleanser (always)
         addStep(for: .cleanser)
-        
-        // Step 2: Treatment / Serum
+
         if !strategy.skipActives {
             let actives = periodProducts.filter {
                 ($0.category == .serum || $0.category == .treatment) &&
@@ -311,11 +309,9 @@ enum DailyCopilotEngine {
             }
         }
         
-        // Step 3: Moisturizer (always, especially if barrier priority)
         let moisturizerInstruction = strategy.prioritizeBarrier ? CleraCopy.DailyCopilot.barrierMoisturizerInstruction : nil
         addStep(for: .moisturizer, instruction: moisturizerInstruction)
-        
-        // Step 4: SPF (morning only)
+
         if period == .morning {
             addStep(for: .sunscreen, instruction: CleraCopy.DailyCopilot.spfInstruction)
         }

@@ -43,12 +43,14 @@
 		25A6038BB5A70F2204CDBC74 /* CleraFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D885B5F97D529AB6560E1E4F /* CleraFixtures.swift */; };
 		25C10D0EAA00950994175929 /* CloudSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E248276F1C64C171E326EE /* CloudSyncTests.swift */; };
 		26BC2E35F7E3536BE11B144B /* RoutineImpactAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38773F60DBB96EE9ACCE8E9 /* RoutineImpactAttribution.swift */; };
+		295B305F39B5AFFE41AEDF5F /* ProductIntelligence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D91155EFA717E3EE14C99C /* ProductIntelligence.swift */; };
 		29D242C9044156FE44B1B5EA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03D0EA9F35890199B11862 /* SplashScreenView.swift */; };
 		2A74C1F72C24E1CA35758951 /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA37785C0F2A7ADBAF69E98 /* FirebaseVertexAI */; };
 		2A80F41AEB3E8439EFFDD5A7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D356A5E65404E89138F146A /* RootView.swift */; };
 		2D84D4696AB4FA6C2F1298A0 /* DailySkinAdviceEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCCB3E90D3B066B21DED55 /* DailySkinAdviceEngineTests.swift */; };
 		2E83BA5622CCBAC0356E1C12 /* DataDensityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517FA68C393CC89A90B164C /* DataDensityBadge.swift */; };
 		30A8B67B44A654BC72326AD0 /* CloudSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688F88924A6BE0E0E7759EB /* CloudSyncService.swift */; };
+		30B5324C68C5A784414C931F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB240F1CEC1B5CB4981757 /* Settings.swift */; };
 		30D1F820843E667AB9DD0C28 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440A517663669DA454FCFB59 /* ProgressView.swift */; };
 		31DE57753DCF609B3C5D2561 /* SessionPipelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3129D21559BD1724E8732C52 /* SessionPipelineTests.swift */; };
 		3326411427A44EE96D875FF2 /* SkinConsultationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0875DDEAE1EE6D80A61409F /* SkinConsultationView.swift */; };
@@ -67,12 +69,14 @@
 		46DE259451B4525E9E58945A /* LocalToCloudMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E39475D95C59655F366F91 /* LocalToCloudMigration.swift */; };
 		47886A684C0B7DA1D77488B5 /* SafetyRuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD17364209CEC166A6C1C53 /* SafetyRuleEngine.swift */; };
 		4816FD3EC2157648F019E018 /* TimelineMarkerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FAB9A3DEA44554CF029670 /* TimelineMarkerRow.swift */; };
+		48CC31B8F466A3A01CB1F255 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED85AF3AD7AF29ED73F2E47 /* Routine.swift */; };
 		49350218CC83F13E41D1D71C /* DailyCopilotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D840DBDAF689A104CBCC69D6 /* DailyCopilotView.swift */; };
 		4A2ACD28DB08F9CBB9609BF6 /* CloudSyncing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A758E41FC4B59D8718B3ED7D /* CloudSyncing.swift */; };
 		4B9A81056A67B8A68CCD733A /* TimelineConfidenceBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722A5669156B32950D2409D8 /* TimelineConfidenceBar.swift */; };
 		4C63697374B41B42C1DCFF38 /* CleraTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DDB96301DD344130D30DAE /* CleraTheme.swift */; };
 		4D8EE98885970AB6BA84A8B6 /* SkinInsightGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0DA225F75C0623513DA10 /* SkinInsightGenerator.swift */; };
 		4FA4192DB352400473F01C1A /* SkinMetricAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25954CF706FE48C231E5864 /* SkinMetricAnalyzer.swift */; };
+		4FC0621F6038D25EC4C5DC20 /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D0041736840E40E01F9196 /* Scan.swift */; };
 		50072E076ABCFA88B0C86248 /* ScanReadinessResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96446FC94D15D9D1C1FFB74B /* ScanReadinessResult.swift */; };
 		51933560DE4B26E394A36A66 /* NativeQualityAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E169D82EE5A6E948B68C1A8 /* NativeQualityAnalyzer.swift */; };
 		53125F8CB527E9C486CD3449 /* WeeklySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6C1C804CB8D8F526D2F6C /* WeeklySummaryView.swift */; };
@@ -101,12 +105,14 @@
 		6A8164B6C15F01B8B4B8B077 /* WeeklyInsightEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E7C8F6A7AFF7AE4F07FB7B /* WeeklyInsightEngine.swift */; };
 		6CC04BDF8A2BF75456C73F48 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C3AEE32682072B8E5B42C /* ProfileView.swift */; };
 		6E052E44556FCDB3FFD85899 /* EnvironmentalContextEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241C3908F399EDDB6714AC4B /* EnvironmentalContextEngine.swift */; };
+		6EA1012BF400119E30D24F92 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C1F194ABD300D0736C66F /* Session.swift */; };
 		6FC28605B592537B507C97C8 /* ScanResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD29537565B680435FB4EE00 /* ScanResultsView.swift */; };
 		70AA8D8DD52B05646BD2C852 /* DailySkinAdviceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D18F5337149F3729221B6 /* DailySkinAdviceEngine.swift */; };
 		721DFAB4267C1A4F3BE1C9C2 /* InsightPrioritisationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E696C33FACC34559CAB284 /* InsightPrioritisationEngine.swift */; };
 		77357BD1FF1B6C84FB0D7587 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE14103CD73D8635FCD1DF3 /* SignUpView.swift */; };
 		77626A0E47E991504817784E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE54D2D56EE2E8D530128CE /* LocationManager.swift */; };
 		77B2E4851CD3D9EE5B736470 /* DailyAdviceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062CBD886C0FAEFDF0578EA6 /* DailyAdviceDetailView.swift */; };
+		784355656D12DBC3833F0C3B /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB264A8B127AF86BA631C65 /* SampleData.swift */; };
 		78E3001E7DA0FD4D39316169 /* WidgetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20303D256D9B3388191AAD05 /* WidgetStore.swift */; };
 		79B383728E1FC445187965D1 /* ScanProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF396C36BC3728DB4154F0E /* ScanProcessingView.swift */; };
 		79DCA163A7681DADD66691B9 /* PrivacySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AB2DC905740694585568DA /* PrivacySettingsView.swift */; };
@@ -125,6 +131,7 @@
 		87F0BD97C87D4E19FFDD2C72 /* TimelineEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B042DB4114AB07F4BA5B /* TimelineEngineTests.swift */; };
 		8935CB22DC0F8DC8BB5AD5C1 /* PhotoComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1481CF2E22C91721714EFEF9 /* PhotoComparisonView.swift */; };
 		8AA56B3D82232393A6DF8878 /* EvennessAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF52EDD8AA81C8E8B839DF4 /* EvennessAnalyzer.swift */; };
+		8B3BEE6F624091179F7C98BA /* DailyPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9FF76F24D0E6C923410D9A /* DailyPlan.swift */; };
 		8D4710E4DEF0970BE16EDE8D /* TrendAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE5E19C9E956F7772D76CC5 /* TrendAnalyzer.swift */; };
 		8EA27AA851490058A83CF1AD /* CrashReportingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F8F17FA7E38279A9E2510 /* CrashReportingError.swift */; };
 		9095B22CFBE61D758AF54F98 /* SkinEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3D89621420D6320D03DD23 /* SkinEngineTests.swift */; };
@@ -134,8 +141,11 @@
 		95111E43EF3A82866097074E /* ExperimentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F8A42C3865B6435E4A8E1D /* ExperimentDetailView.swift */; };
 		992FA1D6577F4E00D7B66754 /* SkinAnalysisPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDA2F52C2D8891283F42167 /* SkinAnalysisPipeline.swift */; };
 		9953AD6AE336F054CBCF847E /* FirestoreUserProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67059190E870F1F202AF7D7E /* FirestoreUserProfileRepository.swift */; };
+		99EA58AF3530789859DC88DD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA84B89DA77AFB2DF917B58E /* Product.swift */; };
+		99ED9DD22AA727019E1AA700 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C02094B186589E1D27FEB32 /* Experiment.swift */; };
 		9A57F68A666DC1C873136981 /* ChangeDetectionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E515718EB8C030809D614 /* ChangeDetectionEngine.swift */; };
 		9ADAE64225A4BEF3E038B3EE /* ModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562A0C2D4A2634661BC2F3B /* ModelsTests.swift */; };
+		A1BFB14646D03E293217C454 /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67D005028DF466605D4C5F /* Failure.swift */; };
 		A4F5F327866E82500B31C97A /* AppleVisionLandmarkDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF231B0BF1A78F3AD6C9045 /* AppleVisionLandmarkDetector.swift */; };
 		A7D22E966A9FB0ED8CCE7CC1 /* MediaPipeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FAD47CA50F1F4937A55194 /* MediaPipeProvider.swift */; };
 		A829B6DDCC3458EFB43A1B14 /* CrashlyticsReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A088FBB76E86AFA369A69943 /* CrashlyticsReporter.swift */; };
@@ -145,7 +155,6 @@
 		AE2458E16EA666B976072C27 /* RednessAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BCA6BDEA390C12B3A9A03 /* RednessAnalyzer.swift */; };
 		AF5229B9E06A392C0E48B7DB /* RoutineRuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D478BA226D276ADCCC2886 /* RoutineRuleEngine.swift */; };
 		B1C8B9529982F2DB1BBE12BF /* PostScanCheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB7F53FA696A3B8CA2CA9A0 /* PostScanCheckInView.swift */; };
-		B338ADB88809EA83A64E419C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6EC542946F8EFD59C37CD6 /* Models.swift */; };
 		B46222760F7D38DA5CFFBA4D /* FirestoreSkinScanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2E1E0422D9CA9C2614E692 /* FirestoreSkinScanRepository.swift */; };
 		B7C0239236AA824BBA1C214A /* ProductRuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4032E2AF38792F2DDDE4287 /* ProductRuleEngine.swift */; };
 		B8C544A31B0F219C45FC8748 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42D6F038C51C8E78020C74 /* LogInView.swift */; };
@@ -169,15 +178,20 @@
 		D2C24854878EA1BA95D40813 /* BaselineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA076ABB3E09EE96030798 /* BaselineManager.swift */; };
 		D5CD2C6FB09DA94F6C0045CD /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978DCBE739FACDDC65D729A /* ImageStore.swift */; };
 		D610C8128F2BC14F0C657AF3 /* SkinPatternRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B575EBF185CC5DE12386F427 /* SkinPatternRecognition.swift */; };
+		D666EE8037B776A0FE003CD8 /* ChangeDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA47A8B24948C1840E0B479 /* ChangeDetection.swift */; };
 		D66F7A02A25FBB6A4048744E /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25288A7914686A74AFBAA6BA /* RepositoryTests.swift */; };
 		D6FEFA1842E6E7B19AD0D190 /* SystemStateViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55AF762FC3E5211CDA2369 /* SystemStateViews.swift */; };
+		D773FA169F9521A25FD8C41A /* SkinProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755C48434C9CA88BABDF1DAE /* SkinProfile.swift */; };
 		D7F274EA1899089A4EF62927 /* BackgroundTasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FC3601E05AE454F108126B /* BackgroundTasks.framework */; };
 		D8788C0CE377470018B389D2 /* InsightEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC2FC44A2A7BF8B8017780 /* InsightEngine.swift */; };
 		D95733867B6D4DC0EBC3A4B0 /* FirestoreRoutineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70BA697CDA0B2AE3158E0E7 /* FirestoreRoutineRepository.swift */; };
 		DA571C821015ADBD82CBC820 /* EnvironmentProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC263C6C7784CDA1F083F4 /* EnvironmentProviders.swift */; };
+		DAA1DF9F17E757195A7D968B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A2F515E2DAB2E49A4EBFB /* User.swift */; };
 		DAA5E3617ED12A86497537D7 /* SkinScanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3428CE9DEA8C744ACA14EF2 /* SkinScanRepository.swift */; };
 		DC920BB4A9C61B68B404FCC4 /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082F495EA9FE9A51CB83BAA3 /* RoutineView.swift */; };
+		E046635BF64F8308F18563C3 /* SkinMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BEF0783ECE3EC029EB2B16 /* SkinMap.swift */; };
 		E4C84BCB6A8C7ABC8D0AC6F7 /* VisualDifferenceOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D427CF91696E0C43E2D20 /* VisualDifferenceOverlay.swift */; };
+		E558092933E84E13880814FB /* Insight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094EB73958E9D8569ADA0E37 /* Insight.swift */; };
 		E5FF26F59E1EB362131E07C9 /* CleraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A48EBC688E3CAFD0E60116A /* CleraTests.swift */; };
 		E6179B7F6761C1A39E314269 /* SkinRiskScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B07D82D5632D943A27E799 /* SkinRiskScorer.swift */; };
 		EB6683ADC6A68BC9C90AAF7D /* ProductIntelligenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C5082DCF46EA2086D7F25D /* ProductIntelligenceView.swift */; };
@@ -217,6 +231,8 @@
 		062CBD886C0FAEFDF0578EA6 /* DailyAdviceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAdviceDetailView.swift; sourceTree = "<group>"; };
 		082F495EA9FE9A51CB83BAA3 /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
 		0907AB8980F26FB026C2D434 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		094EB73958E9D8569ADA0E37 /* Insight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insight.swift; sourceTree = "<group>"; };
+		0A9FF76F24D0E6C923410D9A /* DailyPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPlan.swift; sourceTree = "<group>"; };
 		0CE14103CD73D8635FCD1DF3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		12BD140D94BEEAC5B4A9F9F4 /* AnalyticsLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsLogger.swift; sourceTree = "<group>"; };
 		14218004A39065F3EF0B57E2 /* BaselineCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselineCompleteView.swift; sourceTree = "<group>"; };
@@ -225,12 +241,15 @@
 		15FC3601E05AE454F108126B /* BackgroundTasks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BackgroundTasks.framework; path = System/Library/Frameworks/BackgroundTasks.framework; sourceTree = SDKROOT; };
 		166AECC396631EBFCA584C85 /* SmartNudgeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartNudgeEngine.swift; sourceTree = "<group>"; };
 		168F2B928D9BF2BD2C3964B2 /* AppPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPersistence.swift; sourceTree = "<group>"; };
+		189A2F515E2DAB2E49A4EBFB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1942501CAFAA93A658FF4F28 /* ZoneDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneDetailView.swift; sourceTree = "<group>"; };
 		19FA6C45C80B62ECC2A0BAE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A87E8D5616913416F00D8CF /* PrivacyConsentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyConsentManager.swift; sourceTree = "<group>"; };
 		1AF6B06FE71952D1836E4E7D /* WelcomeStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStepView.swift; sourceTree = "<group>"; };
+		1C02094B186589E1D27FEB32 /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		1CDA2F52C2D8891283F42167 /* SkinAnalysisPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinAnalysisPipeline.swift; sourceTree = "<group>"; };
 		1D2C44573446C6FA85929595 /* FirestoreDecodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDecodingError.swift; sourceTree = "<group>"; };
+		1ED85AF3AD7AF29ED73F2E47 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		20303D256D9B3388191AAD05 /* WidgetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetStore.swift; sourceTree = "<group>"; };
 		22BA076ABB3E09EE96030798 /* BaselineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselineManager.swift; sourceTree = "<group>"; };
 		22CC28EA6ADF99967C0382C7 /* SessionPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPipeline.swift; sourceTree = "<group>"; };
@@ -266,6 +285,7 @@
 		4C25126B6E481D264E9F67FD /* ZoneMaskGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneMaskGenerator.swift; sourceTree = "<group>"; };
 		4CF52EDD8AA81C8E8B839DF4 /* EvennessAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvennessAnalyzer.swift; sourceTree = "<group>"; };
 		5032E329307911E122A97930 /* CleraTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CleraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D91155EFA717E3EE14C99C /* ProductIntelligence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductIntelligence.swift; sourceTree = "<group>"; };
 		56E248276F1C64C171E326EE /* CloudSyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSyncTests.swift; sourceTree = "<group>"; };
 		57D26629A9AB1B14CC85F4B0 /* MLKitProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLKitProvider.swift; sourceTree = "<group>"; };
 		58F419D0264482FC6FC58A9A /* SkinMetricEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinMetricEngine.swift; sourceTree = "<group>"; };
@@ -299,11 +319,13 @@
 		722A5669156B32950D2409D8 /* TimelineConfidenceBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineConfidenceBar.swift; sourceTree = "<group>"; };
 		7256B042DB4114AB07F4BA5B /* TimelineEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEngineTests.swift; sourceTree = "<group>"; };
 		72599E5C8DAF4F4EE00D1908 /* ProductIntelligenceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductIntelligenceEngine.swift; sourceTree = "<group>"; };
+		755C48434C9CA88BABDF1DAE /* SkinProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinProfile.swift; sourceTree = "<group>"; };
 		755F59EDEE7560A209E5B9CE /* ZoneDetectionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneDetectionAnimationView.swift; sourceTree = "<group>"; };
 		7590C81ECBC96AF72D62DE31 /* CleraCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleraCopy.swift; sourceTree = "<group>"; };
 		76B590DA7EEEFF37A7A3EE32 /* AIAndAdviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIAndAdviceTests.swift; sourceTree = "<group>"; };
 		782E780FC441E6A3C6A8A0B6 /* MockCrashReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCrashReporter.swift; sourceTree = "<group>"; };
 		7A48EBC688E3CAFD0E60116A /* CleraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleraTests.swift; sourceTree = "<group>"; };
+		7E5C1F194ABD300D0736C66F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		7ED29442A6AAF6D7B54A038C /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		7FD604532AF21DE11B0B9CB0 /* AdviceCopyEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceCopyEngine.swift; sourceTree = "<group>"; };
 		80323170A47E364C3D7817ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -321,10 +343,10 @@
 		8A15D72DD0CE851B2357FDCB /* DailyCopilotEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCopilotEngine.swift; sourceTree = "<group>"; };
 		8CD17364209CEC166A6C1C53 /* SafetyRuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyRuleEngine.swift; sourceTree = "<group>"; };
 		8D08478FBB31D4C62E7FC04D /* WeatherKitProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitProviders.swift; sourceTree = "<group>"; };
-		8E6EC542946F8EFD59C37CD6 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		8FEF11B7F66F8D39CAC646E2 /* ShineAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShineAnalyzer.swift; sourceTree = "<group>"; };
 		912E515718EB8C030809D614 /* ChangeDetectionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDetectionEngine.swift; sourceTree = "<group>"; };
 		92DB647256D717A107DA5116 /* FirebaseConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfiguration.swift; sourceTree = "<group>"; };
+		93FB240F1CEC1B5CB4981757 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		94FAD47CA50F1F4937A55194 /* MediaPipeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPipeProvider.swift; sourceTree = "<group>"; };
 		95F99F73D93A0DC8B29F129E /* FaceZoneMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceZoneMapper.swift; sourceTree = "<group>"; };
 		96446FC94D15D9D1C1FFB74B /* ScanReadinessResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanReadinessResult.swift; sourceTree = "<group>"; };
@@ -351,6 +373,7 @@
 		AA990216747ECA3C81E6B677 /* ScanHapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHapticManager.swift; sourceTree = "<group>"; };
 		ABF396C36BC3728DB4154F0E /* ScanProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanProcessingView.swift; sourceTree = "<group>"; };
 		AE41DB590C900D8A8A468BFD /* DailyAdviceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAdviceWidget.swift; sourceTree = "<group>"; };
+		AE67D005028DF466605D4C5F /* Failure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
 		B16FB5A4AA8E935FE6B24FAF /* DailyAdviceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAdviceCard.swift; sourceTree = "<group>"; };
 		B333B9313D18E8FA716B950E /* VertexAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexAIService.swift; sourceTree = "<group>"; };
 		B3EAC081667D41BFCB57D1D0 /* SkinTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinTimelineView.swift; sourceTree = "<group>"; };
@@ -365,6 +388,7 @@
 		BC2F05D660D7F095BDAAC421 /* SkinScoreCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinScoreCalculator.swift; sourceTree = "<group>"; };
 		BC7E494C75600A45E68C5560 /* FirestoreDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDTOs.swift; sourceTree = "<group>"; };
 		BC82B4D46A1505609A333E92 /* TextureAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureAnalyzer.swift; sourceTree = "<group>"; };
+		BFA47A8B24948C1840E0B479 /* ChangeDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDetection.swift; sourceTree = "<group>"; };
 		C0355D93F11DBBD84A28C342 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		C1CCCB3E90D3B066B21DED55 /* DailySkinAdviceEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySkinAdviceEngineTests.swift; sourceTree = "<group>"; };
 		C38773F60DBB96EE9ACCE8E9 /* RoutineImpactAttribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineImpactAttribution.swift; sourceTree = "<group>"; };
@@ -378,6 +402,7 @@
 		CDB6BE78999646D6E337AA70 /* SkinAnalysisPipelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinAnalysisPipelineTests.swift; sourceTree = "<group>"; };
 		CED6CAF01C4E106DA940E8CE /* SkinAnalysisResult+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkinAnalysisResult+Mapping.swift"; sourceTree = "<group>"; };
 		D1774E487E71CE3552B0FD38 /* SkinEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinEngine.swift; sourceTree = "<group>"; };
+		D2BEF0783ECE3EC029EB2B16 /* SkinMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinMap.swift; sourceTree = "<group>"; };
 		D32EDF6D52E7CC19F5944D28 /* InsightCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightCard.swift; sourceTree = "<group>"; };
 		D3428CE9DEA8C744ACA14EF2 /* SkinScanRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinScanRepository.swift; sourceTree = "<group>"; };
 		D374BDA29B7FE7848CDF2081 /* BaselineScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaselineScanView.swift; sourceTree = "<group>"; };
@@ -385,6 +410,7 @@
 		D86961C3AF25F0F6524BFC4E /* firebase.rules */ = {isa = PBXFileReference; path = firebase.rules; sourceTree = "<group>"; };
 		D885B5F97D529AB6560E1E4F /* CleraFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleraFixtures.swift; sourceTree = "<group>"; };
 		D98B64D9BA671A46CE0CDA3D /* ExperimentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentsView.swift; sourceTree = "<group>"; };
+		DA84B89DA77AFB2DF917B58E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DAE35F69CE0607AFAC924C44 /* UserProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRepository.swift; sourceTree = "<group>"; };
 		DBB4A5116AF30879CA2D986F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DBF231B0BF1A78F3AD6C9045 /* AppleVisionLandmarkDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleVisionLandmarkDetector.swift; sourceTree = "<group>"; };
@@ -398,6 +424,7 @@
 		EE8BD5FFA4CAD33944E089B8 /* AuthFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowView.swift; sourceTree = "<group>"; };
 		F0875DDEAE1EE6D80A61409F /* SkinConsultationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinConsultationView.swift; sourceTree = "<group>"; };
 		F0AC15D6A14B3422C9058345 /* SkinMaskGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinMaskGenerator.swift; sourceTree = "<group>"; };
+		F0D0041736840E40E01F9196 /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
 		F1907AE23CA358F18346D9DF /* AuthProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProviding.swift; sourceTree = "<group>"; };
 		F20C939E4EE414B7EED4AD8D /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		F2343DEEF9E34EF98764E8A8 /* SkinAnalysisModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinAnalysisModels.swift; sourceTree = "<group>"; };
@@ -405,6 +432,7 @@
 		F3FC263C6C7784CDA1F083F4 /* EnvironmentProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentProviders.swift; sourceTree = "<group>"; };
 		F4449591748D35A34BF1D2C6 /* FaceLandmarkDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarkDetector.swift; sourceTree = "<group>"; };
 		FA1C3AEE32682072B8E5B42C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FAB264A8B127AF86BA631C65 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -934,13 +962,27 @@
 		B83310CA12844986F55224AF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BFA47A8B24948C1840E0B479 /* ChangeDetection.swift */,
 				912E515718EB8C030809D614 /* ChangeDetectionEngine.swift */,
 				7590C81ECBC96AF72D62DE31 /* CleraCopy.swift */,
 				8A15D72DD0CE851B2357FDCB /* DailyCopilotEngine.swift */,
+				0A9FF76F24D0E6C923410D9A /* DailyPlan.swift */,
+				1C02094B186589E1D27FEB32 /* Experiment.swift */,
+				AE67D005028DF466605D4C5F /* Failure.swift */,
+				094EB73958E9D8569ADA0E37 /* Insight.swift */,
 				15AC2FC44A2A7BF8B8017780 /* InsightEngine.swift */,
-				8E6EC542946F8EFD59C37CD6 /* Models.swift */,
+				DA84B89DA77AFB2DF917B58E /* Product.swift */,
+				52D91155EFA717E3EE14C99C /* ProductIntelligence.swift */,
 				72599E5C8DAF4F4EE00D1908 /* ProductIntelligenceEngine.swift */,
+				1ED85AF3AD7AF29ED73F2E47 /* Routine.swift */,
+				FAB264A8B127AF86BA631C65 /* SampleData.swift */,
+				F0D0041736840E40E01F9196 /* Scan.swift */,
+				7E5C1F194ABD300D0736C66F /* Session.swift */,
 				22CC28EA6ADF99967C0382C7 /* SessionPipeline.swift */,
+				93FB240F1CEC1B5CB4981757 /* Settings.swift */,
+				D2BEF0783ECE3EC029EB2B16 /* SkinMap.swift */,
+				755C48434C9CA88BABDF1DAE /* SkinProfile.swift */,
+				189A2F515E2DAB2E49A4EBFB /* User.swift */,
 				64E7C8F6A7AFF7AE4F07FB7B /* WeeklyInsightEngine.swift */,
 			);
 			path = Models;
@@ -1285,6 +1327,7 @@
 				538E6C50953282B34B2030B1 /* BaselineScanView.swift in Sources */,
 				AC332F35E7DD9532AF3AFD35 /* BeforeAfterRevealView.swift in Sources */,
 				1E9F288231BFE817FCAC1465 /* CameraManager.swift in Sources */,
+				D666EE8037B776A0FE003CD8 /* ChangeDetection.swift in Sources */,
 				9A57F68A666DC1C873136981 /* ChangeDetectionEngine.swift in Sources */,
 				24B8121D7B0E2F4D577EF70B /* CleraApp.swift in Sources */,
 				57E9988C8F852BD8039C267F /* CleraAppDelegate.swift in Sources */,
@@ -1302,6 +1345,7 @@
 				7FC6CF50945F7BF8646B7C1A /* DailyAdviceWidgetStore.swift in Sources */,
 				F0D92CA3D745AD37C937F92A /* DailyCopilotEngine.swift in Sources */,
 				49350218CC83F13E41D1D71C /* DailyCopilotView.swift in Sources */,
+				8B3BEE6F624091179F7C98BA /* DailyPlan.swift in Sources */,
 				70AA8D8DD52B05646BD2C852 /* DailySkinAdviceEngine.swift in Sources */,
 				F3B88BBD9C1C9C5AF5DAD65D /* DailySkinAdviceModels.swift in Sources */,
 				2E83BA5622CCBAC0356E1C12 /* DataDensityBadge.swift in Sources */,
@@ -1310,11 +1354,13 @@
 				67BCFEF71C4184F241848039 /* EnvironmentRuleEngine.swift in Sources */,
 				6E052E44556FCDB3FFD85899 /* EnvironmentalContextEngine.swift in Sources */,
 				8AA56B3D82232393A6DF8878 /* EvennessAnalyzer.swift in Sources */,
+				99ED9DD22AA727019E1AA700 /* Experiment.swift in Sources */,
 				95111E43EF3A82866097074E /* ExperimentDetailView.swift in Sources */,
 				FBD27CD86AED8C521331503A /* ExperimentsView.swift in Sources */,
 				F6DD64FD68272891E50CAECD /* FaceLandmarkDetector.swift in Sources */,
 				166B7B6CCCDFB5E73A00312F /* FacePositioningGuideView.swift in Sources */,
 				D004DA198ACE6FB0E559E29F /* FaceZoneMapper.swift in Sources */,
+				A1BFB14646D03E293217C454 /* Failure.swift in Sources */,
 				F12D864B0F0525EDB10A453E /* FirebaseAuthService.swift in Sources */,
 				647C592FE70737D8782A72E8 /* FirebaseConfiguration.swift in Sources */,
 				FB6F273C83FBF10CD8451AFF /* FirestoreDTOs.swift in Sources */,
@@ -1325,6 +1371,7 @@
 				BDF0130B275DCA6B53132FBA /* ForgotPasswordView.swift in Sources */,
 				D5CD2C6FB09DA94F6C0045CD /* ImageStore.swift in Sources */,
 				1A817CFF830419BCFA91902E /* InitialSkinMapView.swift in Sources */,
+				E558092933E84E13880814FB /* Insight.swift in Sources */,
 				BEDA2EED20386C8FCDC33EEB /* InsightCard.swift in Sources */,
 				D8788C0CE377470018B389D2 /* InsightEngine.swift in Sources */,
 				721DFAB4267C1A4F3BE1C9C2 /* InsightPrioritisationEngine.swift in Sources */,
@@ -1339,7 +1386,6 @@
 				661CEBE3928CC377A7716038 /* MediaPipeLandmarkDetector.swift in Sources */,
 				A7D22E966A9FB0ED8CCE7CC1 /* MediaPipeProvider.swift in Sources */,
 				6784AF6D9F3A2BCD267265E3 /* MigrationError.swift in Sources */,
-				B338ADB88809EA83A64E419C /* Models.swift in Sources */,
 				51933560DE4B26E394A36A66 /* NativeQualityAnalyzer.swift in Sources */,
 				686B0B7831035B6CB693A22E /* NoOpAIService.swift in Sources */,
 				F1A1B28717E733DBD4698FFC /* NotificationManager.swift in Sources */,
@@ -1351,6 +1397,8 @@
 				B1C8B9529982F2DB1BBE12BF /* PostScanCheckInView.swift in Sources */,
 				598371901FD35050CEE7E018 /* PrivacyConsentManager.swift in Sources */,
 				79DCA163A7681DADD66691B9 /* PrivacySettingsView.swift in Sources */,
+				99EA58AF3530789859DC88DD /* Product.swift in Sources */,
+				295B305F39B5AFFE41AEDF5F /* ProductIntelligence.swift in Sources */,
 				8750353992165DE4B8F65458 /* ProductIntelligenceEngine.swift in Sources */,
 				EB6683ADC6A68BC9C90AAF7D /* ProductIntelligenceView.swift in Sources */,
 				B7C0239236AA824BBA1C214A /* ProductRuleEngine.swift in Sources */,
@@ -1362,11 +1410,14 @@
 				AE2458E16EA666B976072C27 /* RednessAnalyzer.swift in Sources */,
 				F1C26CBD7D15D01B262B5A49 /* RemindersSettingsView.swift in Sources */,
 				2A80F41AEB3E8439EFFDD5A7 /* RootView.swift in Sources */,
+				48CC31B8F466A3A01CB1F255 /* Routine.swift in Sources */,
 				26BC2E35F7E3536BE11B144B /* RoutineImpactAttribution.swift in Sources */,
 				7E98B8EFBD6A9EDDAB1A50E5 /* RoutineRepository.swift in Sources */,
 				AF5229B9E06A392C0E48B7DB /* RoutineRuleEngine.swift in Sources */,
 				DC920BB4A9C61B68B404FCC4 /* RoutineView.swift in Sources */,
 				47886A684C0B7DA1D77488B5 /* SafetyRuleEngine.swift in Sources */,
+				784355656D12DBC3833F0C3B /* SampleData.swift in Sources */,
+				4FC0621F6038D25EC4C5DC20 /* Scan.swift in Sources */,
 				1C1D06164349C274DEDBC5D9 /* ScanAnimationState.swift in Sources */,
 				EFEE2A91A5BA836274140800 /* ScanConsistencyEngine.swift in Sources */,
 				194BBB7F1D9DF1215D7DA23B /* ScanEngine.swift in Sources */,
@@ -1376,8 +1427,10 @@
 				6792F8AB66124DE6DB8BCCE5 /* ScanProgressAnimation.swift in Sources */,
 				50072E076ABCFA88B0C86248 /* ScanReadinessResult.swift in Sources */,
 				6FC28605B592537B507C97C8 /* ScanResultsView.swift in Sources */,
+				6EA1012BF400119E30D24F92 /* Session.swift in Sources */,
 				F9943111C0C3C9E0E5B6B2D1 /* SessionDetailView.swift in Sources */,
 				098DBC2773460CD92FDBC4B5 /* SessionPipeline.swift in Sources */,
+				30B5324C68C5A784414C931F /* Settings.swift in Sources */,
 				1BA9C45E7CF1DF332A481AB5 /* ShineAnalyzer.swift in Sources */,
 				77357BD1FF1B6C84FB0D7587 /* SignUpView.swift in Sources */,
 				7DEAEDDEBB2444B30E005E8A /* SimulatorSkinAnalyzer.swift in Sources */,
@@ -1391,10 +1444,12 @@
 				85CF75E47474A014BA995189 /* SkinEngine.swift in Sources */,
 				1141FF75B9778F3D264A7319 /* SkinEngineModels.swift in Sources */,
 				4D8EE98885970AB6BA84A8B6 /* SkinInsightGenerator.swift in Sources */,
+				E046635BF64F8308F18563C3 /* SkinMap.swift in Sources */,
 				0AE6D693B75E82019FC77F77 /* SkinMaskGenerator.swift in Sources */,
 				4FA4192DB352400473F01C1A /* SkinMetricAnalyzer.swift in Sources */,
 				54AE2D037749A31FFE20435F /* SkinMetricEngine.swift in Sources */,
 				D610C8128F2BC14F0C657AF3 /* SkinPatternRecognition.swift in Sources */,
+				D773FA169F9521A25FD8C41A /* SkinProfile.swift in Sources */,
 				E6179B7F6761C1A39E314269 /* SkinRiskScorer.swift in Sources */,
 				DAA5E3617ED12A86497537D7 /* SkinScanRepository.swift in Sources */,
 				22C7DC78F4E8C9B2EBCA36AE /* SkinScoreCalculator.swift in Sources */,
@@ -1410,6 +1465,7 @@
 				63008B3FFE2F2FE0F855A77F /* TimelineModels.swift in Sources */,
 				37BD014B4E8A4DC80533569E /* TodayView.swift in Sources */,
 				8D4710E4DEF0970BE16EDE8D /* TrendAnalyzer.swift in Sources */,
+				DAA1DF9F17E757195A7D968B /* User.swift in Sources */,
 				B97ABCA61FE97ACE268E8E75 /* UserProfileRepository.swift in Sources */,
 				C66BD37B190B5BBC534C93BA /* VertexAIService.swift in Sources */,
 				92075511A4CF8F60E8A53B5E /* VisionProvider.swift in Sources */,

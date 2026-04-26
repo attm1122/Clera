@@ -234,7 +234,11 @@ enum SkinPatternRecognition {
                 }
             }
 
-            if bestPeriod == nil || changes < bestPeriod!.changeCount {
+            if let currentBest = bestPeriod {
+                if changes < currentBest.changeCount {
+                    bestPeriod = (sorted[i].createdAt, twoWeeksLater, changes)
+                }
+            } else {
                 bestPeriod = (sorted[i].createdAt, twoWeeksLater, changes)
             }
         }

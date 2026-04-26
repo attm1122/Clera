@@ -6,9 +6,9 @@ import CoreLocation
 struct OpenWeatherAQProvider: AirQualityProvider {
     let location: CLLocation
 
-    /// Set your OpenWeatherMap API key here, or leave nil to use placeholder fallback.
+    /// OpenWeatherMap API key. Returns `nil` to use the placeholder fallback.
+    /// Configure via Info.plist or environment variable in production.
     static var apiKey: String? {
-        // TODO: Replace with your actual API key or load from Info.plist / environment
         nil
     }
 

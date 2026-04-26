@@ -1,6 +1,12 @@
 import Foundation
 
 enum TrendAnalyzer {
+    enum Thresholds {
+        static let stable: Double = 0.05
+        static let significant: Double = 0.15
+        static let baselineZeroDenominator: Double = 100.0
+    }
+
     /// Threshold-based trend determination.
     /// - Under 5% change = stable
     /// - 5-15% change = slight change
@@ -68,9 +74,13 @@ enum TrendAnalyzer {
         let badRatio = Double(increasedCount + slightlyIncreasedCount) / Double(total)
         let goodRatio = Double(improvedCount) / Double(total)
 
-        if badRatio >= 0.2 {
+        let significantChangeThreshold = 0.2
+        let noticeableChangeThreshold = 0.1
+        let goodChangeThreshold = 0.2
+
+        if badRatio >= significantChangeThreshold {
             return .significantChanges
-        } else if badRatio >= 0.1 || goodRatio >= 0.2 {
+        } else if badRatio >= noticeableChangeThreshold || goodRatio >= goodChangeThreshold {
             return .noticeableChanges
         } else if badRatio > 0 || goodRatio > 0 {
             return .stableWithMinorChanges
@@ -89,15 +99,15 @@ enum TrendAnalyzer {
         let diff = Double(currentScore - baselineScore)
         let percentChange = baselineScore != 0
             ? abs(diff / Double(baselineScore))
-            : abs(diff / 100.0)
+            : abs(diff / Thresholds.baselineZeroDenominator)
         let higherIsWorse = metric != .evenness
 
-        if percentChange < 0.05 {
+        if percentChange < Thresholds.stable {
             return .stable
         }
 
         let increased = currentScore > baselineScore
-        let significant = percentChange >= 0.15
+        let significant = percentChange >= Thresholds.significant
 
         if higherIsWorse {
             if increased {

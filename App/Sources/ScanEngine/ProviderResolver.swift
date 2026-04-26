@@ -42,9 +42,9 @@ enum ProviderResolver {
     }
 
     /// Recommended default for the current build.
+    /// Uses Apple Vision to avoid external package dependencies.
+    /// MLKit is available as an alternative strategy once the dependency is added.
     static var defaultStrategy: Strategy {
-        // TODO: Switch to `.mlKit` after adding the GoogleMLKit dependency.
-        // For now, `.appleVision` guarantees the app builds without external packages.
         .appleVision
     }
 }

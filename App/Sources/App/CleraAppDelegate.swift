@@ -10,7 +10,8 @@ final class CleraAppDelegate: NSObject, UIApplicationDelegate {
         FirebaseConfiguration.configure()
 
         BGTaskScheduler.shared.register(forTaskWithIdentifier: Self.refreshTaskIdentifier, using: nil) { task in
-            self.handleAppRefresh(task: task as! BGAppRefreshTask)
+            guard let refreshTask = task as? BGAppRefreshTask else { return }
+            self.handleAppRefresh(task: refreshTask)
         }
         return true
     }

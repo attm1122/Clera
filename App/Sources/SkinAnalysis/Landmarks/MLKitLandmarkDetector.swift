@@ -24,7 +24,7 @@ import UIKit
 struct MLKitLandmarkDetector: FaceLandmarkDetector {
 
     func detectLandmarks(in image: UIImage) async -> FaceLandmarkResult {
-        // TODO: Replace with actual ML Kit face detection inference.
+        // Stub: ML Kit dependency not yet integrated. Returns empty result.
         return FaceLandmarkResult()
     }
 }

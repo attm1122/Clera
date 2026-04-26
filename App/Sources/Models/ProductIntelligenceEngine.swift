@@ -303,7 +303,7 @@ enum ProductIntelligenceEngine {
             ]
             
             for (metricName, firstSev, latestSev) in metrics {
-                if severityScore(latestSev) > severityScore(firstSev) {
+                if latestSev.numericScore > firstSev.numericScore {
                     // Zone worsened — check if new products were added
                     let newProducts = changes.filter { $0.changeType == .added }
                     if !newProducts.isEmpty {
@@ -344,12 +344,4 @@ enum ProductIntelligenceEngine {
         return .moderate
     }
     
-    private static func severityScore(_ severity: ZoneSeverity) -> Int {
-        switch severity {
-        case .none: return 0
-        case .low: return 1
-        case .moderate: return 2
-        case .high: return 3
-        }
-    }
 }

@@ -13,17 +13,10 @@ enum SkinAnalysisPipeline {
         landmarkDetector: FaceLandmarkDetector,
         baselineManager: BaselineManager
     ) async -> SkinAnalysisResult {
-        // Step 1: Validate image quality on front image
         let quality = await validateQuality(for: frontImage)
-
-        // Step 2: Detect face landmarks on front image
         let landmarks = await landmarkDetector.detectLandmarks(in: frontImage)
-
-        // Step 3: Map landmarks to 5 zones
         let zonePaths = FaceZoneMapper.mapZones(from: landmarks)
         let skinMask = SkinMaskGenerator.generateSkinMask(from: frontImage, excluding: nil)
-
-        // Steps 4 & 5: For each zone, generate mask and run metric analyzers
         var zoneAnalyses: [SkinZoneAnalysis] = []
         var allMetrics: [SkinZone: [SkinMetricKey: SkinMetricScore]] = [:]
 
@@ -59,7 +52,6 @@ enum SkinAnalysisPipeline {
             zoneAnalyses.append(zoneAnalysis)
         }
 
-        // Step 6: Compare against baseline if exists
         let baseline = baselineManager.loadBaseline(userId: userId)
         let comparison: BaselineComparison?
         if let baseline = baseline {
@@ -77,7 +69,6 @@ enum SkinAnalysisPipeline {
             comparison = nil
         }
 
-        // Step 7: Generate overall summary
         let summary = SkinInsightGenerator.generateSummary(
             zoneAnalyses: zoneAnalyses,
             comparison: comparison
@@ -91,7 +82,6 @@ enum SkinAnalysisPipeline {
             rightImage: rightImage
         )
 
-        // Step 8: Return result
         return SkinAnalysisResult(
             scanId: scanId,
             userId: userId,

@@ -111,7 +111,7 @@ enum WeeklyInsightEngine {
             ]
             
             let changes = metrics.map { (label, first, latest) -> (label: String, delta: Int) in
-                (label, severityScore(latest) - severityScore(first))
+                (label, latest.numericScore - first.numericScore)
             }
             
             let improving = changes.filter { $0.delta < 0 }
@@ -137,9 +137,9 @@ enum WeeklyInsightEngine {
                 description = CleraCopy.WeeklyInsight.mixedDescription
             } else {
                 trend = .stable
-                let worstMetric = metrics.max { severityScore($0.1) < severityScore($1.1) } ?? metrics[0]
+                let worstMetric = metrics.max { $0.1.numericScore < $1.1.numericScore } ?? metrics[0]
                 primaryMetric = worstMetric.0
-                description = severityScore(worstMetric.2) == 0
+                description = worstMetric.2.numericScore == 0
                     ? CleraCopy.WeeklyInsight.lookingClear
                     : CleraCopy.WeeklyInsight.noSignificantChange
             }
@@ -397,12 +397,4 @@ enum WeeklyInsightEngine {
         return counts
     }
     
-    private static func severityScore(_ severity: ZoneSeverity) -> Int {
-        switch severity {
-        case .none: return 0
-        case .low: return 1
-        case .moderate: return 2
-        case .high: return 3
-        }
-    }
 }

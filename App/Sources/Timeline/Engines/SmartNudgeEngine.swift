@@ -47,7 +47,10 @@ enum SmartNudgeEngine {
 
         // Sort by priority, remove expired, limit to 3
         return nudges
-            .filter { $0.expiresAt == nil || $0.expiresAt! > now }
+            .filter { nudge in
+                guard let expiresAt = nudge.expiresAt else { return true }
+                return expiresAt > now
+            }
             .sorted { priorityRank($0.priority) > priorityRank($1.priority) }
             .prefix(3)
             .map { $0 }

@@ -52,13 +52,15 @@ enum ChangeDetectionEngine {
             return ChangeDetectionResult(generatedAt: .now, mode: .sevenDay, zoneChanges: [])
         }
         let sorted = skinMaps.sorted(by: { $0.date < $1.date })
-        let latest = sorted.last!
+        guard let latest = sorted.last else {
+            return ChangeDetectionResult(generatedAt: .now, mode: .sevenDay, zoneChanges: [])
+        }
         let weekAgo = Calendar.current.date(byAdding: .day, value: -7, to: latest.date) ?? latest.date
         
         // Find the map closest to 7 days ago
         let historical = sorted
             .filter { $0.date <= weekAgo }
-            .last ?? sorted.first!
+            .last ?? sorted[0]
         
         let changes = computeZoneChanges(
             from: historical,
@@ -147,7 +149,7 @@ enum ChangeDetectionEngine {
             ]
             
             for (metricName, prevSeverity, latestSeverity, checkInFlag) in metrics {
-                let delta = severityScore(latestSeverity) - severityScore(prevSeverity)
+                let delta = latestSeverity.numericScore - prevSeverity.numericScore
                 let direction: ChangeDirection
                 var magnitude: ChangeMagnitude
                 
@@ -324,21 +326,8 @@ enum ChangeDetectionEngine {
         }
     }
     
-    private static func severityScore(_ severity: ZoneSeverity) -> Int {
-        switch severity {
-        case .none: return 0
-        case .low: return 1
-        case .moderate: return 2
-        case .high: return 3
-        }
-    }
-    
     private static func magnitudeScore(_ magnitude: ChangeMagnitude) -> Int {
-        switch magnitude {
-        case .slight: return 1
-        case .moderate: return 2
-        case .significant: return 3
-        }
+        magnitude.numericScore
     }
 }
 

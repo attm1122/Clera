@@ -21,7 +21,7 @@ import UIKit
 struct MediaPipeLandmarkDetector: FaceLandmarkDetector {
 
     func detectLandmarks(in image: UIImage) async -> FaceLandmarkResult {
-        // TODO: Replace with actual MediaPipe Face Landmarker inference.
+        // Stub: MediaPipe dependency not yet integrated. Returns empty result.
         return FaceLandmarkResult()
     }
 }

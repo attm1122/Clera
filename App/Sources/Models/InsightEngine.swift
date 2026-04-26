@@ -36,7 +36,7 @@ enum InsightEngine {
         for zone in latest.skinMap.zones {
             guard let prevZone = previous.skinMap.zones.first(where: { $0.zoneType == zone.zoneType }) else { continue }
 
-            if severityScore(prevZone.status.breakouts) > severityScore(zone.status.breakouts) {
+            if prevZone.status.breakouts.numericScore > zone.status.breakouts.numericScore {
                 insights.append(Insight(
                     title: "\(zone.zoneType.displayName) breakouts improving",
                     body: CleraCopy.InsightEngine.breakoutsImproved(from: prevZone.status.breakouts.displayName.lowercased(), to: zone.status.breakouts.displayName.lowercased()),
@@ -45,7 +45,7 @@ enum InsightEngine {
                     priority: .high
                 ))
             }
-            if severityScore(prevZone.status.redness) > severityScore(zone.status.redness) {
+            if prevZone.status.redness.numericScore > zone.status.redness.numericScore {
                 insights.append(Insight(
                     title: "\(zone.zoneType.displayName) redness calming",
                     body: CleraCopy.InsightEngine.rednessImproved,
@@ -69,7 +69,7 @@ enum InsightEngine {
         for zone in latest.skinMap.zones {
             guard let prevZone = previous.skinMap.zones.first(where: { $0.zoneType == zone.zoneType }) else { continue }
 
-            if severityScore(prevZone.status.breakouts) < severityScore(zone.status.breakouts) {
+            if prevZone.status.breakouts.numericScore < zone.status.breakouts.numericScore {
                 insights.append(Insight(
                     title: "\(zone.zoneType.displayName) breakouts increased",
                     body: CleraCopy.InsightEngine.breakoutsIncreased(from: prevZone.status.breakouts.displayName.lowercased(), to: zone.status.breakouts.displayName.lowercased()),
@@ -172,12 +172,4 @@ enum InsightEngine {
         return insights
     }
 
-    private static func severityScore(_ severity: ZoneSeverity) -> Int {
-        switch severity {
-        case .none: return 0
-        case .low: return 1
-        case .moderate: return 2
-        case .high: return 3
-        }
-    }
 }
