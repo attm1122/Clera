@@ -8,31 +8,26 @@ import FirebaseCore
 
 /// Encapsulates Firebase setup with graceful degradation when config is missing.
 enum FirebaseConfiguration {
-    /// Whether Firebase is available in this build.
-    /// Checks for the presence of GoogleService-Info.plist.
+    /// Whether Firebase is fully initialized and ready to use.
+    /// Checks for the plist AND that FirebaseApp.configure() has been called.
     static var isConfigured: Bool {
         #if canImport(FirebaseCore)
         return Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist") != nil
+            && FirebaseApp.app() != nil
         #else
         return false
         #endif
     }
 
     /// Safely configures Firebase if the plist is present.
-    /// Idempotent — calling multiple times is a no-op.
+    /// Call exactly once from `AppDelegate.application(_:didFinishLaunchingWithOptions:)`.
     /// Logs a clear message in debug builds when missing.
     static func configure() {
         #if canImport(FirebaseCore)
-        guard isConfigured else {
+        guard Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist") != nil else {
             #if DEBUG
             print("[Firebase] GoogleService-Info.plist not found. Firebase services are disabled.")
             print("[Firebase] Add the plist to App/Resources/ to enable cloud features.")
-            #endif
-            return
-        }
-        guard FirebaseApp.app() == nil else {
-            #if DEBUG
-            print("[Firebase] Firebase already configured. Skipping duplicate configuration.")
             #endif
             return
         }

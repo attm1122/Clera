@@ -128,7 +128,6 @@ final class AppModel {
     // MARK: - Production Factory
 
     static func makeProductionModel() -> AppModel {
-        FirebaseConfiguration.configure()
         let crashReporter: CrashReporting = FirebaseConfiguration.isConfigured ? CrashlyticsReporter() : NoOpCrashReporter()
         crashReporter.configure()
 
