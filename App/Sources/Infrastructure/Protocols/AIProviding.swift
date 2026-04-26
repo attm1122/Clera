@@ -81,6 +81,15 @@ enum AIActionType: Sendable {
     case readMore
 }
 
+enum AIError: Error, Equatable {
+    case serviceUnavailable
+    case emptyResponse
+    case generationFailed(String)
+    case parsingFailed
+    case safetyBlocked(reason: String)
+    case responseIncomplete(reason: String)
+}
+
 struct EnvironmentalContext: Sendable {
     let uvIndex: Int
     let humidity: Int

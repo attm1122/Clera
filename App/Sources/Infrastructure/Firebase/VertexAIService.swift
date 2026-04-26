@@ -14,7 +14,17 @@ final class VertexAIService: AIProviding, @unchecked Sendable {
     private let model: GenerativeModel?
     private let crashReporter: CrashReporting
 
-    init(crashReporter: CrashReporting) {
+    /// The Gemini model to use. Configurable for A/B testing or region availability.
+    static let defaultModelName = "gemini-2.0-flash"
+
+    /// Firebase Vertex AI location. Use `us-central1` for best availability.
+    static let defaultLocation = "us-central1"
+
+    init(
+        crashReporter: CrashReporting,
+        modelName: String = VertexAIService.defaultModelName,
+        location: String = VertexAIService.defaultLocation
+    ) {
         self.crashReporter = crashReporter
 
         #if canImport(FirebaseVertexAI)
@@ -22,9 +32,9 @@ final class VertexAIService: AIProviding, @unchecked Sendable {
             self.model = nil
             return
         }
-        let vertexAI = VertexAI.vertexAI()
+        let vertexAI = VertexAI.vertexAI(location: location)
         self.model = vertexAI.generativeModel(
-            modelName: "gemini-2.0-flash",
+            modelName: modelName,
             generationConfig: GenerationConfig(
                 temperature: 0.4,
                 topP: 0.95,
@@ -60,9 +70,11 @@ final class VertexAIService: AIProviding, @unchecked Sendable {
             #else
             throw AIError.serviceUnavailable
             #endif
+        } catch let error as AIError {
+            throw error
         } catch {
             crashReporter.recordError(error, context: ["ai_feature": "generateInsight"])
-            throw AIError.generationFailed(error.localizedDescription)
+            throw mapVertexAIError(error)
         }
     }
 
@@ -83,9 +95,11 @@ final class VertexAIService: AIProviding, @unchecked Sendable {
             #else
             throw AIError.serviceUnavailable
             #endif
+        } catch let error as AIError {
+            throw error
         } catch {
             crashReporter.recordError(error, context: ["ai_feature": "answerQuestion"])
-            throw AIError.generationFailed(error.localizedDescription)
+            throw mapVertexAIError(error)
         }
     }
 
@@ -167,13 +181,7 @@ Generate a personalized skincare insight in this exact JSON format:
     }
 
     private func parseInsightResponse(_ text: String) throws -> AIInsightResponse {
-        // Extract JSON from possible markdown code block
-        let jsonString: String
-        if let start = text.range(of: "{"), let end = text.range(of: "}", range: start.upperBound..<text.endIndex) {
-            jsonString = String(text[start.lowerBound...end.upperBound])
-        } else {
-            jsonString = text
-        }
+        let jsonString = extractJSON(from: text)
 
         guard let data = jsonString.data(using: .utf8) else {
             throw AIError.parsingFailed
@@ -212,6 +220,20 @@ Generate a personalized skincare insight in this exact JSON format:
 
     // MARK: - Helpers
 
+    private func extractJSON(from text: String) -> String {
+        // Handle markdown code blocks: ```json { ... } ```
+        if let codeBlockStart = text.range(of: "```"),
+           let jsonStart = text.range(of: "{", range: codeBlockStart.upperBound..<text.endIndex),
+           let jsonEnd = text.range(of: "}", range: jsonStart.upperBound..<text.endIndex) {
+            return String(text[jsonStart.lowerBound...jsonEnd.upperBound])
+        }
+        // Handle bare JSON
+        if let start = text.range(of: "{"), let end = text.range(of: "}", range: start.upperBound..<text.endIndex) {
+            return String(text[start.lowerBound...end.upperBound])
+        }
+        return text
+    }
+
     private static func parseActionType(_ raw: String) -> AIActionType {
         switch raw.lowercased() {
         case "adjustroutine", "adjust_routine": return .adjustRoutine
@@ -221,6 +243,37 @@ Generate a personalized skincare insight in this exact JSON format:
         default: return .readMore
         }
     }
+
+    #if canImport(FirebaseVertexAI)
+    private func mapVertexAIError(_ error: Error) -> AIError {
+        guard let vertexError = error as? GenerateContentError else {
+            return .generationFailed(error.localizedDescription)
+        }
+
+        switch vertexError {
+        case .promptBlocked(let response):
+            let reason = response.promptFeedback?.blockReason?.rawValue ?? "unknown"
+            crashReporter.log("AI prompt blocked: \(reason)", level: .warning)
+            return .safetyBlocked(reason: reason)
+
+        case .responseStoppedEarly(let reason, _):
+            crashReporter.log("AI response stopped early: \(reason)", level: .warning)
+            return .responseIncomplete(reason: reason.rawValue)
+
+        case .internalError(let underlying):
+            crashReporter.recordError(underlying, context: ["ai_error": "internal"])
+            return .generationFailed(underlying.localizedDescription)
+
+        case .promptImageContentError(let underlying):
+            crashReporter.recordError(underlying, context: ["ai_error": "imageContent"])
+            return .generationFailed(underlying.localizedDescription)
+        }
+    }
+    #else
+    private func mapVertexAIError(_ error: Error) -> AIError {
+        .generationFailed(error.localizedDescription)
+    }
+    #endif
 
     private static var systemInstructionText: String {
         """
@@ -233,27 +286,5 @@ Generate a personalized skincare insight in this exact JSON format:
         - Suggest specific product types or routine adjustments when relevant.
         - If data is limited, acknowledge uncertainty and suggest a scan.
         """
-    }
-}
-
-// MARK: - AI Errors
-
-enum AIError: Error, Equatable {
-    case serviceUnavailable
-    case emptyResponse
-    case generationFailed(String)
-    case parsingFailed
-
-    var localizedDescription: String {
-        switch self {
-        case .serviceUnavailable:
-            return "AI insights are temporarily unavailable."
-        case .emptyResponse:
-            return "Received an empty response from the AI."
-        case .generationFailed(let reason):
-            return "Failed to generate insight: \(reason)"
-        case .parsingFailed:
-            return "Failed to parse the AI response."
-        }
     }
 }
