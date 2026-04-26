@@ -6,3 +6,6 @@ xcuserdata/
 *.xcuserstate
 .DS_Store
 
+# Firebase configuration — do not commit to public repo
+GoogleService-Info.plist
+

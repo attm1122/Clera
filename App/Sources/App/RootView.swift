@@ -5,12 +5,13 @@ struct RootView: View {
 
     var body: some View {
         Group {
-            if appModel.hasCompletedOnboarding {
-                MainTabView()
-            } else {
+            if !appModel.hasCompletedAuth {
+                AuthFlowView()
+            } else if !appModel.hasCompletedOnboarding {
                 OnboardingFlowView()
+            } else {
+                MainTabView()
             }
         }
-        .background(CleraColor.background.ignoresSafeArea())
     }
 }

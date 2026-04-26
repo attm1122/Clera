@@ -1,15 +1,15 @@
 import SwiftUI
 
 enum CleraColor {
-    static let background = Color(hex: 0xFFFFFF)
-    static let surface = Color(hex: 0xF7F7F5)
-    static let elevatedSurface = Color.white.opacity(0.88)
-    static let textPrimary = Color(hex: 0x171717)
-    static let textSecondary = Color(hex: 0x6B6B6B)
-    static let border = Color(hex: 0xE5E5E5)
-    static let accent = Color(hex: 0x2563EB)
-    static let accentSoft = Color(hex: 0xEAF1FF)
-    static let success = Color(hex: 0xD7E9DF)
+    static let background = Color(hex: 0xF4F2EC)
+    static let surface = Color(hex: 0xFFFFFF)
+    static let elevatedSurface = Color.white.opacity(0.55)
+    static let textPrimary = Color(hex: 0x1C1917)
+    static let textSecondary = Color(hex: 0x635F5A)
+    static let border = Color(hex: 0xD4D0C8)
+    static let accent = Color(hex: 0x996C48)
+    static let accentSoft = Color(hex: 0xF5EDE5)
+    static let success = Color(hex: 0x99A744)
 }
 
 enum CleraSpacing {
@@ -21,8 +21,8 @@ enum CleraSpacing {
 }
 
 enum CleraRadius {
-    static let medium: CGFloat = 16
-    static let large: CGFloat = 24
+    static let medium: CGFloat = 12
+    static let large: CGFloat = 16
     static let pill: CGFloat = 999
 }
 
@@ -36,5 +36,11 @@ extension Color {
             opacity: alpha
         )
     }
+    
+    init(hex: String, alpha: Double = 1) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        self.init(hex: int, alpha: alpha)
+    }
 }
-

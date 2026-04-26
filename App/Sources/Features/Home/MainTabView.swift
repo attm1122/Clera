@@ -4,24 +4,28 @@ struct MainTabView: View {
     @Environment(AppModel.self) private var appModel
 
     var body: some View {
-        TabView(selection: Bindable(appModel).selectedTab) {
-            HomeView()
-                .tag(AppTab.home)
-                .tabItem { Label(AppTab.home.title, systemImage: AppTab.home.systemImage) }
+        @Bindable var model = appModel
+        TabView(selection: $model.selectedTab) {
+            TodayView()
+                .tabItem { Label(AppTab.today.title, systemImage: AppTab.today.systemImage) }
+                .tag(AppTab.today)
 
-            ProgressView()
-                .tag(AppTab.progress)
-                .tabItem { Label(AppTab.progress.title, systemImage: AppTab.progress.systemImage) }
+            MapView()
+                .tabItem { Label(AppTab.map.title, systemImage: AppTab.map.systemImage) }
+                .tag(AppTab.map)
 
             RoutineView()
-                .tag(AppTab.routine)
                 .tabItem { Label(AppTab.routine.title, systemImage: AppTab.routine.systemImage) }
+                .tag(AppTab.routine)
+
+            ProgressView()
+                .tabItem { Label(AppTab.progress.title, systemImage: AppTab.progress.systemImage) }
+                .tag(AppTab.progress)
 
             ProfileView()
-                .tag(AppTab.profile)
                 .tabItem { Label(AppTab.profile.title, systemImage: AppTab.profile.systemImage) }
+                .tag(AppTab.profile)
         }
         .tint(CleraColor.accent)
     }
 }
-

@@ -10,6 +10,10 @@ settings:
   base:
     SWIFT_VERSION: 6.0
     CODE_SIGN_STYLE: Automatic
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: 11.0.0
 targets:
   Clera:
     type: application
@@ -17,8 +21,14 @@ targets:
     deploymentTarget: "17.0"
     sources:
       - path: App/Sources
-    resources:
-      - path: App/Resources
+      - path: App/Resources/Assets.xcassets
+        type: resource
+      - path: App/Resources/GoogleService-Info.plist
+        type: resource
+      - path: App/Resources/PrivacyInfo.xcprivacy
+        type: resource
+      - path: App/Resources/firebase.rules
+        type: resource
     info:
       path: App/Resources/Info.plist
     settings:
@@ -30,6 +40,23 @@ targets:
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         TARGETED_DEVICE_FAMILY: "1"
         SUPPORTS_MACCATALYST: NO
+    entitlements:
+      path: App/Resources/Clera.entitlements
+    dependencies:
+      - sdk: WeatherKit.framework
+      - sdk: BackgroundTasks.framework
+      - sdk: CoreLocation.framework
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseFirestore
+      - package: Firebase
+        product: FirebaseCrashlytics
+      - package: Firebase
+        product: FirebaseCore
+      - package: Firebase
+        product: FirebaseAnalytics
+
   CleraTests:
     type: bundle.unit-test
     platform: iOS
@@ -44,3 +71,19 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Clera.app/Clera"
 
+  DailyAdviceWidget:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: DailyAdviceWidget
+    info:
+      path: DailyAdviceWidget/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.attm.clera.DailyAdviceWidget
+        PRODUCT_NAME: DailyAdviceWidget
+        TARGETED_DEVICE_FAMILY: "1"
+        SUPPORTS_MACCATALYST: NO
+    entitlements:
+      path: DailyAdviceWidget/DailyAdviceWidget.entitlements

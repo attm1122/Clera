@@ -1,12 +1,32 @@
 import Foundation
 
 struct PersistedAppState: Codable {
+    var hasCompletedAuth: Bool
+    var userProfile: UserProfile?
+    var permissionState: PermissionState
     var hasCompletedOnboarding: Bool
-    var selectedGoal: SkinGoal?
-    var reminderCadence: ReminderCadence
-    var preferredReminderTime: Date
-    var currentRoutine: [RoutineItem]
-    var sessions: [CheckInSession]
+    var skinProfile: SkinProfile
+    var baselineSkinMap: SkinMap?
+    var skinBaseline: SkinBaseline?
+    var currentProducts: [Product]
+    var routineLogs: [RoutineLogEntry]
+    var routineChanges: [RoutineChangeLogEntry]
+    var sessions: [ScanSession]
+    var skinMapHistory: [SkinMap]
+    var experiments: [Experiment]
+    var insights: [Insight]
+    var weeklyReports: [WeeklyReport]
+    var weeklyInsights: [WeeklyInsight]
+    var productIntelligenceReports: [ProductIntelligenceReport]
+    var dailyPlans: [DailyPlan]
+    var skinSessions: [SkinSession]
+    var skinSessionResults: [SkinSessionResult]
+    var nudges: [Nudge]
+    var reminderSettings: ReminderSettings
+    var privacySettings: PrivacySettings
+    var selectedTab: AppTab
+    var dailyAdvice: DailySkinAdviceResult?
+    var dailyAdviceHistory: [DailySkinAdviceResult]
 }
 
 struct AppPersistence {
