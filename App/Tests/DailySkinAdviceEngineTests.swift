@@ -3,6 +3,13 @@ import XCTest
 
 final class DailySkinAdviceEngineTests: XCTestCase {
 
+    override func setUp() {
+        super.setUp()
+        // Clear widget store temp directory to prevent stale data between test runs
+        let tempDir = FileManager.default.temporaryDirectory.appendingPathComponent("clera-widget-tests")
+        try? FileManager.default.removeItem(at: tempDir)
+    }
+
     // MARK: - Risk Scorer Tests
 
     func testScoreUVLow() {

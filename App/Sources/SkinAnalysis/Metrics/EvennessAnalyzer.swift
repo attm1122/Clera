@@ -6,7 +6,8 @@ struct EvennessAnalyzer: SkinMetricAnalyzer {
     let metricKey: SkinMetricKey = .evenness
 
     func analyze(image: UIImage, skinMask: CGImage?, zoneMask: CGImage?) -> SkinMetricScore {
-        guard let score = computeEvennessScore(image: image, skinMask: skinMask, zoneMask: zoneMask) else {
+        guard let sampler = PixelBufferSampler(image: image),
+              let score = computeEvennessScore(sampler: sampler, skinMask: skinMask, zoneMask: zoneMask) else {
             return SkinMetricScore(score: 0, confidence: .low, trend: .insufficientData, reason: "Could not analyse evenness in this zone.")
         }
 
@@ -19,31 +20,15 @@ struct EvennessAnalyzer: SkinMetricAnalyzer {
         return SkinMetricScore(score: score, confidence: .medium, trend: .insufficientData, reason: reason)
     }
 
-    private func computeEvennessScore(image: UIImage, skinMask: CGImage?, zoneMask: CGImage?) -> Int? {
-        guard let cgImage = image.cgImage,
-              let dataProvider = cgImage.dataProvider,
-              let data = dataProvider.data,
-              let ptr = CFDataGetBytePtr(data) else { return nil }
-
-        let width = cgImage.width
-        let height = cgImage.height
-        let bytesPerPixel = 4
-        let bytesPerRow = cgImage.bytesPerRow
-
+    private func computeEvennessScore(sampler: PixelBufferSampler, skinMask: CGImage?, zoneMask: CGImage?) -> Int? {
         var rValues: [Double] = []
         var gValues: [Double] = []
         var bValues: [Double] = []
 
-        for y in stride(from: 0, to: height, by: 4) {
-            for x in stride(from: 0, to: width, by: 4) {
-                if !isInMasks(x: x, y: y, width: width, height: height, skinMask: skinMask, zoneMask: zoneMask) {
-                    continue
-                }
-                let offset = y * bytesPerRow + x * bytesPerPixel
-                rValues.append(Double(ptr[offset]))
-                gValues.append(Double(ptr[offset + 1]))
-                bValues.append(Double(ptr[offset + 2]))
-            }
+        sampler.enumerateMaskedPixels(step: 4, skinMask: skinMask, zoneMask: zoneMask) { offset in
+            rValues.append(Double(sampler.ptr[offset]))
+            gValues.append(Double(sampler.ptr[offset + 1]))
+            bValues.append(Double(sampler.ptr[offset + 2]))
         }
 
         guard rValues.count > 10 else { return nil }
@@ -53,10 +38,8 @@ struct EvennessAnalyzer: SkinMetricAnalyzer {
         let bStd = standardDeviation(bValues)
         let avgStd = (rStd + gStd + bStd) / 3.0
 
-        // Lower std dev = more even. Typical skin std ~15-40.
-        // Map: std 5 -> score 100, std 50 -> score 0
         let score = Int(100 - (avgStd - 5) * 2.2)
-        return max(0, min(100, score))
+        return PixelBufferSampler.clampScore(score)
     }
 
     private func standardDeviation(_ values: [Double]) -> Double {

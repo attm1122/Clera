@@ -117,6 +117,7 @@
 		79B383728E1FC445187965D1 /* ScanProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF396C36BC3728DB4154F0E /* ScanProcessingView.swift */; };
 		79DCA163A7681DADD66691B9 /* PrivacySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AB2DC905740694585568DA /* PrivacySettingsView.swift */; };
 		7B847E2AD1B63E6753430322 /* BaselineCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14218004A39065F3EF0B57E2 /* BaselineCompleteView.swift */; };
+		7BC79AE6D05BD6E192AC804A /* PixelBufferSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BEA6E32411D6DAFDBB2B7F /* PixelBufferSampler.swift */; };
 		7D2E4AEBA695A6FA8B8B9538 /* MockAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B0B3F8F6CB0AC868E26817 /* MockAuthProvider.swift */; };
 		7DEAEDDEBB2444B30E005E8A /* SimulatorSkinAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDE4753280737118DBC98D /* SimulatorSkinAnalyzer.swift */; };
 		7E98B8EFBD6A9EDDAB1A50E5 /* RoutineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE12030957B405F9551020D /* RoutineRepository.swift */; };
@@ -395,6 +396,7 @@
 		C4AC3E65C4CDD515C7454B5E /* ScanAnimationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanAnimationState.swift; sourceTree = "<group>"; };
 		C568A2E2AFCF20917B42F868 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		C688F88924A6BE0E0E7759EB /* CloudSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSyncService.swift; sourceTree = "<group>"; };
+		C9BEA6E32411D6DAFDBB2B7F /* PixelBufferSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelBufferSampler.swift; sourceTree = "<group>"; };
 		CA3813E4288C19877BC28D34 /* CrashReportingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashReportingTests.swift; sourceTree = "<group>"; };
 		CADF07C22E32EA9929E48151 /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
 		CCE5E19C9E956F7772D76CC5 /* TrendAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendAnalyzer.swift; sourceTree = "<group>"; };
@@ -1103,6 +1105,7 @@
 				035C73CCE9ECB47CCC10C76F /* DrynessAnalyzer.swift */,
 				4CF52EDD8AA81C8E8B839DF4 /* EvennessAnalyzer.swift */,
 				71C17C26E0C2DC9644F66E29 /* PigmentationAnalyzer.swift */,
+				C9BEA6E32411D6DAFDBB2B7F /* PixelBufferSampler.swift */,
 				3E5BCA6BDEA390C12B3A9A03 /* RednessAnalyzer.swift */,
 				8FEF11B7F66F8D39CAC646E2 /* ShineAnalyzer.swift */,
 				F0AC15D6A14B3422C9058345 /* SkinMaskGenerator.swift */,
@@ -1394,6 +1397,7 @@
 				F60993F3F4D335980A81EDF2 /* PermissionsView.swift in Sources */,
 				8935CB22DC0F8DC8BB5AD5C1 /* PhotoComparisonView.swift in Sources */,
 				F591C825D5664F494A8CC42E /* PigmentationAnalyzer.swift in Sources */,
+				7BC79AE6D05BD6E192AC804A /* PixelBufferSampler.swift in Sources */,
 				B1C8B9529982F2DB1BBE12BF /* PostScanCheckInView.swift in Sources */,
 				598371901FD35050CEE7E018 /* PrivacyConsentManager.swift in Sources */,
 				79DCA163A7681DADD66691B9 /* PrivacySettingsView.swift in Sources */,
