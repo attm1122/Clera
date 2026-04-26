@@ -4,6 +4,11 @@ import XCTest
 @MainActor
 final class MigrationTests: XCTestCase {
 
+    override func setUp() {
+        super.setUp()
+        UserDefaults.standard.removeObject(forKey: "clera.migrated.user-123")
+    }
+
     func testMigrationDoesNotDuplicateRecords() async throws {
         let mockAuth = MockAuthProvider()
         _ = try await mockAuth.signUp(email: "test@example.com", password: "pw", name: "Test")

@@ -4,6 +4,13 @@ import XCTest
 @MainActor
 final class AuthServiceTests: XCTestCase {
 
+    override func setUp() {
+        super.setUp()
+        let root = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+        let fileURL = root.appendingPathComponent("Clera/state.json")
+        try? FileManager.default.removeItem(at: fileURL)
+    }
+
     func testAuthStateFlow() async throws {
         let mockAuth = MockAuthProvider()
         let model = AppModel(authProvider: mockAuth)
